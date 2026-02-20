@@ -1,25 +1,20 @@
+import { useState } from "react";
 import Navbar from "@/components/Navbar";
-import HeroSection from "@/components/HeroSection";
-import TrustBar from "@/components/TrustBar";
-import CoverageSection from "@/components/CoverageSection";
-import HowItWorksSection from "@/components/HowItWorksSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
-import CTASection from "@/components/CTASection";
+import Home1 from "./Home1";
+import Home2 from "./Home2";
 import Footer from "@/components/Footer";
 
 const Index = () => {
+  const [activeHome, setActiveHome] = useState(1);
+
   return (
-    <div className="min-h-screen bg-background">
-      <Navbar />
-      <HeroSection />
-      <TrustBar />
-      <CoverageSection />
-      <HowItWorksSection />
-      <TestimonialsSection />
-      <CTASection />
+    <div className="min-h-screen bg-background selection:bg-purple-500/30">
+      <Navbar activeHome={activeHome} setActiveHome={setActiveHome} />
+      {activeHome === 1 ? <Home1 /> : <Home2 />}
       <Footer />
     </div>
   );
 };
 
 export default Index;
+
