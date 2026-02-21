@@ -35,8 +35,8 @@ const Navbar = () => {
 
   const dropdowns = {
     Home: [
-      { label: "Developer Portal", href: "/", icon: Activity },
-      { label: "Insurance Suite", href: "/home-2", icon: ShieldCheck },
+      { label: "Home 1", href: "/", icon: Activity },
+      { label: "Home 2", href: "/home-2", icon: ShieldCheck },
       { label: "Admin Console", href: "/admin", icon: Settings },
     ],
     Dashboards: [
