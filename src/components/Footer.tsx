@@ -1,77 +1,80 @@
+import { Link } from "react-router-dom";
 import { ShieldCheck, Twitter, Linkedin, Instagram, Activity } from "lucide-react";
 
-const footerLinks = [
-  {
-    title: "Protection DNA",
-    links: ["Health Matrix", "Legacy Shield", "Asset Drive", "Travel Layer", "Business Defense"],
-  },
-  {
-    title: "Advocacy",
-    links: ["Track a Claim", "Document Vault", "Hospital Matrix", "Transparency Report", "Grievance Desk"],
-  },
-  {
-    title: "The Team",
-    links: ["Our DNA", "Leadership", "Risk Engineering", "Press & Media", "Contact Registry"],
-  },
-  {
-    title: "Regulatory",
-    links: ["IRDAI Compliance", "Terms of Matrix", "Privacy DNA", "Cookie Policy", "Disclaimer"],
-  },
-];
-
 const Footer = () => {
+  const footerLinks = [
+    {
+      title: "Product",
+      links: [
+        { label: "Solutions", href: "/solutions" },
+        { label: "Pricing", href: "/pricing" },
+        { label: "Security", href: "#" },
+        { label: "Releases", href: "#" }
+      ]
+    },
+    {
+      title: "Company",
+      links: [
+        { label: "About Us", href: "/about" },
+        { label: "Contact", href: "/contact" },
+        { label: "Careers", href: "#" },
+        { label: "Legal", href: "#" }
+      ]
+    },
+    {
+      title: "Resources",
+      links: [
+        { label: "Documentation", href: "#" },
+        { label: "API Status", href: "#" },
+        { label: "Support", href: "#" }
+      ]
+    },
+    {
+      title: "Dashboards",
+      links: [
+        { label: "User Portal", href: "/dashboard" },
+        { label: "Admin Console", href: "/admin" },
+        { label: "Team Space", href: "#" }
+      ]
+    }
+  ];
+
   return (
-    <footer className="bg-[#050608] border-t border-white/5 pt-24 pb-12">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-12 mb-20">
-          {/* Brand column */}
+    <footer className="bg-[#050608] border-t border-white/5 pt-32 pb-20 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-12 mb-24">
+          {/* Brand Column */}
           <div className="col-span-2">
-            <a href="#" className="flex items-center gap-2.5 mb-8">
-              <div className="w-10 h-10 rounded-2xl bg-orbit-purple flex items-center justify-center shadow-premium">
-                <ShieldCheck className="w-6 h-6 text-white" />
+            <Link to="/" className="flex items-center gap-3 group mb-8">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-500 to-blue-500 p-2 flex items-center justify-center group-hover:rotate-12 transition-transform shadow-glow">
+                <ShieldCheck className="w-full h-full text-white" />
               </div>
-              <span className="text-2xl font-display font-bold text-foreground tracking-tight">
-                Orbit<span className="text-gradient-purple">Scale</span>
-              </span>
-            </a>
-            <p className="text-muted-foreground leading-relaxed mb-8 max-w-sm text-sm">
-              Architecting absolute protection through insurance engineering.
-              Built on the principles of transparency, speed, and absolute advocacy.
+              <span className="text-2xl font-display font-black text-white italic tracking-tighter">Orbit.Scale</span>
+            </Link>
+            <p className="text-muted-foreground text-sm max-w-xs leading-relaxed italic mb-8">
+              Empowering the next generation of engineering teams with technical protection matrices and deep-mesh insurance.
             </p>
-
-            <div className="flex items-center gap-3 px-4 py-2 rounded-xl bg-white/5 border border-white/10 w-fit mb-8">
-              <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              <span className="text-[10px] font-black text-white/60 uppercase tracking-widest">System Status: IRDAI SECURED</span>
-            </div>
-
             <div className="flex gap-4">
               {[Twitter, Linkedin, Instagram].map((Icon, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-muted-foreground hover:text-white hover:border-purple-500/50 transition-all shadow-premium"
-                >
+                <button key={i} className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white/40 hover:text-white hover:bg-white/10 transition-all">
                   <Icon className="w-4 h-4" />
-                </a>
+                </button>
               ))}
             </div>
           </div>
 
-          {/* Link columns */}
+          {/* Links Columns */}
           {footerLinks.map((col) => (
             <div key={col.title} className="col-span-1">
-              <h4 className="text-white font-black text-[10px] uppercase tracking-widest mb-6">
+              <h4 className="text-white font-black text-[10px] uppercase tracking-widest mb-6 underline decoration-purple-500/50 decoration-2 underline-offset-8">
                 {col.title}
               </h4>
               <ul className="space-y-4">
                 {col.links.map((link) => (
-                  <li key={link}>
-                    <a
-                      href="#"
-                      className="text-muted-foreground hover:text-white transition-colors text-[12px] font-medium"
-                    >
-                      {link}
-                    </a>
+                  <li key={link.label}>
+                    <Link to={link.href} className="text-muted-foreground hover:text-white transition-colors text-[12px] font-bold uppercase tracking-widest">
+                      {link.label}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -79,21 +82,23 @@ const Footer = () => {
           ))}
         </div>
 
-        {/* Bottom bar */}
-        <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-8">
-          <div className="text-center md:text-left">
-            <p className="text-[10px] text-muted-foreground/60 font-bold uppercase tracking-widest">
-              © 2025 OrbitScale Insurance DNA. All rights reserved.
-            </p>
-            <p className="text-[9px] text-muted-foreground/40 mt-1 font-medium">
-              IRDAI Reg. No. 142 · CIN: U66010MH2018PTC302945 · ISO 27001 DNA Certified
-            </p>
-          </div>
-          <p className="text-[10px] text-muted-foreground/40 max-w-md text-center md:text-right leading-relaxed italic">
-            "Insurance is the subject matter of solicitation. Secure your matrix carefully after reviewing all policy DNA documentation."
+        {/* Bottom Bar */}
+        <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/5 gap-8">
+          <p className="text-[10px] font-black text-white/20 uppercase tracking-[0.3em]">
+            © 2026 OrbitScale Technologies. All rights reserved.
           </p>
+          <div className="flex items-center gap-8">
+            <Link to="#" className="text-[10px] font-black text-white/20 uppercase tracking-widest hover:text-white transition-colors">Privacy Policy</Link>
+            <Link to="#" className="text-[10px] font-black text-white/20 uppercase tracking-widest hover:text-white transition-colors">Terms of Service</Link>
+            <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-[9px] font-black text-emerald-500 uppercase tracking-widest">
+              <Activity className="w-3 h-3" /> System Operational
+            </div>
+          </div>
         </div>
       </div>
+
+      {/* Background Aesthetic */}
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-600/5 blur-[150px] rounded-full" />
     </footer>
   );
 };
