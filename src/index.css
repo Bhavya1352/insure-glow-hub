@@ -274,35 +274,447 @@
   }
 }
 
-/* Un-mirror ALL leaf content elements so they remain readable.
-   The parent wrapper is already flipped via React inline style:
-   style={{ transform: 'scaleX(-1)' }}
-   This second scaleX(-1) on leaf elements cancels out the parent
-   flip, keeping text/images readable while layout stays mirrored. */
-[dir="rtl"] h1,
-[dir="rtl"] h2,
-[dir="rtl"] h3,
-[dir="rtl"] h4,
-[dir="rtl"] h5,
-[dir="rtl"] h6,
-[dir="rtl"] p,
-[dir="rtl"] span,
-[dir="rtl"] a,
-[dir="rtl"] li,
-[dir="rtl"] td,
-[dir="rtl"] th,
-[dir="rtl"] label,
-[dir="rtl"] button,
+/* ===== Core RTL: Text & Direction ===== */
+[dir="rtl"] {
+  text-align: right;
+}
+
+/* ===== Hero section text reversal — characters reverse on RTL toggle ===== */
+[dir="rtl"] section:first-of-type h1,
+[dir="rtl"] section:first-of-type h2,
+[dir="rtl"] section:first-of-type h3,
+[dir="rtl"] section:first-of-type p,
+[dir="rtl"] section:first-of-type span,
+[dir="rtl"] section:first-of-type a,
+[dir="rtl"] section:first-of-type button {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+
+[dir="rtl"] .text-center {
+  text-align: center !important;
+}
+
+[dir="rtl"] .text-left {
+  text-align: right !important;
+}
+
+[dir="rtl"] .text-right {
+  text-align: left !important;
+}
+
+[dir="rtl"] .md\:text-left {
+  text-align: right !important;
+}
+
+[dir="rtl"] .md\:text-right {
+  text-align: left !important;
+}
+
+[dir="rtl"] .lg\:text-left {
+  text-align: right !important;
+}
+
+/* ===== Core RTL: Flex Direction Reversal ===== */
+/* This is the KEY rule — reverses all flex-row containers */
+[dir="rtl"] .flex-row {
+  flex-direction: row-reverse !important;
+}
+
+[dir="rtl"] .md\:flex-row {
+  flex-direction: row-reverse !important;
+}
+
+[dir="rtl"] .lg\:flex-row {
+  flex-direction: row-reverse !important;
+}
+
+[dir="rtl"] .xl\:flex-row {
+  flex-direction: row-reverse !important;
+}
+
+[dir="rtl"] .flex-row-reverse {
+  flex-direction: row !important;
+}
+
+/* ===== Margins: ml ↔ mr ===== */
+[dir="rtl"] .ml-1 {
+  margin-left: 0 !important;
+  margin-right: 0.25rem !important;
+}
+
+[dir="rtl"] .ml-2 {
+  margin-left: 0 !important;
+  margin-right: 0.5rem !important;
+}
+
+[dir="rtl"] .ml-3 {
+  margin-left: 0 !important;
+  margin-right: 0.75rem !important;
+}
+
+[dir="rtl"] .ml-4 {
+  margin-left: 0 !important;
+  margin-right: 1rem !important;
+}
+
+[dir="rtl"] .ml-6 {
+  margin-left: 0 !important;
+  margin-right: 1.5rem !important;
+}
+
+[dir="rtl"] .ml-8 {
+  margin-left: 0 !important;
+  margin-right: 2rem !important;
+}
+
+[dir="rtl"] .ml-auto {
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}
+
+[dir="rtl"] .mr-1 {
+  margin-right: 0 !important;
+  margin-left: 0.25rem !important;
+}
+
+[dir="rtl"] .mr-2 {
+  margin-right: 0 !important;
+  margin-left: 0.5rem !important;
+}
+
+[dir="rtl"] .mr-3 {
+  margin-right: 0 !important;
+  margin-left: 0.75rem !important;
+}
+
+[dir="rtl"] .mr-4 {
+  margin-right: 0 !important;
+  margin-left: 1rem !important;
+}
+
+[dir="rtl"] .mr-6 {
+  margin-right: 0 !important;
+  margin-left: 1.5rem !important;
+}
+
+[dir="rtl"] .mr-8 {
+  margin-right: 0 !important;
+  margin-left: 2rem !important;
+}
+
+[dir="rtl"] .mr-auto {
+  margin-right: 0 !important;
+  margin-left: auto !important;
+}
+
+/* ===== Paddings: pl ↔ pr ===== */
+[dir="rtl"] .pl-2 {
+  padding-left: 0 !important;
+  padding-right: 0.5rem !important;
+}
+
+[dir="rtl"] .pl-3 {
+  padding-left: 0 !important;
+  padding-right: 0.75rem !important;
+}
+
+[dir="rtl"] .pl-4 {
+  padding-left: 0 !important;
+  padding-right: 1rem !important;
+}
+
+[dir="rtl"] .pl-5 {
+  padding-left: 0 !important;
+  padding-right: 1.25rem !important;
+}
+
+[dir="rtl"] .pl-6 {
+  padding-left: 0 !important;
+  padding-right: 1.5rem !important;
+}
+
+[dir="rtl"] .pl-8 {
+  padding-left: 0 !important;
+  padding-right: 2rem !important;
+}
+
+[dir="rtl"] .pl-10 {
+  padding-left: 0 !important;
+  padding-right: 2.5rem !important;
+}
+
+[dir="rtl"] .pl-12 {
+  padding-left: 0 !important;
+  padding-right: 3rem !important;
+}
+
+[dir="rtl"] .pr-2 {
+  padding-right: 0 !important;
+  padding-left: 0.5rem !important;
+}
+
+[dir="rtl"] .pr-3 {
+  padding-right: 0 !important;
+  padding-left: 0.75rem !important;
+}
+
+[dir="rtl"] .pr-4 {
+  padding-right: 0 !important;
+  padding-left: 1rem !important;
+}
+
+[dir="rtl"] .pr-5 {
+  padding-right: 0 !important;
+  padding-left: 1.25rem !important;
+}
+
+[dir="rtl"] .pr-6 {
+  padding-right: 0 !important;
+  padding-left: 1.5rem !important;
+}
+
+[dir="rtl"] .pr-8 {
+  padding-right: 0 !important;
+  padding-left: 2rem !important;
+}
+
+[dir="rtl"] .pr-10 {
+  padding-right: 0 !important;
+  padding-left: 2.5rem !important;
+}
+
+[dir="rtl"] .pr-12 {
+  padding-right: 0 !important;
+  padding-left: 3rem !important;
+}
+
+/* ===== Positions: left ↔ right ===== */
+[dir="rtl"] .left-0 {
+  left: auto !important;
+  right: 0 !important;
+}
+
+[dir="rtl"] .left-1 {
+  left: auto !important;
+  right: 0.25rem !important;
+}
+
+[dir="rtl"] .left-2 {
+  left: auto !important;
+  right: 0.5rem !important;
+}
+
+[dir="rtl"] .left-3 {
+  left: auto !important;
+  right: 0.75rem !important;
+}
+
+[dir="rtl"] .left-4 {
+  left: auto !important;
+  right: 1rem !important;
+}
+
+[dir="rtl"] .left-6 {
+  left: auto !important;
+  right: 1.5rem !important;
+}
+
+[dir="rtl"] .left-8 {
+  left: auto !important;
+  right: 2rem !important;
+}
+
+[dir="rtl"] .right-0 {
+  right: auto !important;
+  left: 0 !important;
+}
+
+[dir="rtl"] .right-1 {
+  right: auto !important;
+  left: 0.25rem !important;
+}
+
+[dir="rtl"] .right-2 {
+  right: auto !important;
+  left: 0.5rem !important;
+}
+
+[dir="rtl"] .right-3 {
+  right: auto !important;
+  left: 0.75rem !important;
+}
+
+[dir="rtl"] .right-4 {
+  right: auto !important;
+  left: 1rem !important;
+}
+
+[dir="rtl"] .right-6 {
+  right: auto !important;
+  left: 1.5rem !important;
+}
+
+[dir="rtl"] .right-8 {
+  right: auto !important;
+  left: 2rem !important;
+}
+
+[dir="rtl"] .-right-1 {
+  right: auto !important;
+  left: -0.25rem !important;
+}
+
+[dir="rtl"] .-left-1 {
+  left: auto !important;
+  right: -0.25rem !important;
+}
+
+/* ===== Space-x reversal ===== */
+[dir="rtl"] .space-x-1> :not([hidden])~ :not([hidden]) {
+  margin-left: 0 !important;
+  margin-right: 0.25rem !important;
+}
+
+[dir="rtl"] .space-x-2> :not([hidden])~ :not([hidden]) {
+  margin-left: 0 !important;
+  margin-right: 0.5rem !important;
+}
+
+[dir="rtl"] .space-x-3> :not([hidden])~ :not([hidden]) {
+  margin-left: 0 !important;
+  margin-right: 0.75rem !important;
+}
+
+[dir="rtl"] .space-x-4> :not([hidden])~ :not([hidden]) {
+  margin-left: 0 !important;
+  margin-right: 1rem !important;
+}
+
+[dir="rtl"] .space-x-6> :not([hidden])~ :not([hidden]) {
+  margin-left: 0 !important;
+  margin-right: 1.5rem !important;
+}
+
+[dir="rtl"] .space-x-8> :not([hidden])~ :not([hidden]) {
+  margin-left: 0 !important;
+  margin-right: 2rem !important;
+}
+
+/* ===== Gap does NOT need flipping — it's direction-agnostic ===== */
+
+/* ===== Gradients ===== */
+[dir="rtl"] .bg-gradient-to-r {
+  background-image: linear-gradient(to left, var(--tw-gradient-stops)) !important;
+}
+
+[dir="rtl"] .bg-gradient-to-l {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops)) !important;
+}
+
+[dir="rtl"] .bg-gradient-to-br {
+  background-image: linear-gradient(to bottom left, var(--tw-gradient-stops)) !important;
+}
+
+[dir="rtl"] .bg-gradient-to-bl {
+  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops)) !important;
+}
+
+[dir="rtl"] .bg-gradient-to-tr {
+  background-image: linear-gradient(to top left, var(--tw-gradient-stops)) !important;
+}
+
+/* ===== Border-radius ===== */
+[dir="rtl"] .rounded-l {
+  border-radius: 0 0.25rem 0.25rem 0 !important;
+}
+
+[dir="rtl"] .rounded-r {
+  border-radius: 0.25rem 0 0 0.25rem !important;
+}
+
+[dir="rtl"] .rounded-l-lg {
+  border-radius: 0 0.5rem 0.5rem 0 !important;
+}
+
+[dir="rtl"] .rounded-r-lg {
+  border-radius: 0.5rem 0 0 0.5rem !important;
+}
+
+[dir="rtl"] .rounded-l-xl {
+  border-radius: 0 0.75rem 0.75rem 0 !important;
+}
+
+[dir="rtl"] .rounded-r-xl {
+  border-radius: 0.75rem 0 0 0.75rem !important;
+}
+
+[dir="rtl"] .rounded-l-2xl {
+  border-radius: 0 1rem 1rem 0 !important;
+}
+
+[dir="rtl"] .rounded-r-2xl {
+  border-radius: 1rem 0 0 1rem !important;
+}
+
+/* ===== Float ===== */
+[dir="rtl"] .float-left {
+  float: right !important;
+}
+
+[dir="rtl"] .float-right {
+  float: left !important;
+}
+
+/* ===== Order ===== */
+[dir="rtl"] .order-1 {
+  order: 2 !important;
+}
+
+[dir="rtl"] .order-2 {
+  order: 1 !important;
+}
+
+[dir="rtl"] .lg\:order-1 {
+  order: 2 !important;
+}
+
+[dir="rtl"] .lg\:order-2 {
+  order: 1 !important;
+}
+
+/* ===== Justify ===== */
+[dir="rtl"] .justify-start {
+  justify-content: flex-end !important;
+}
+
+[dir="rtl"] .justify-end {
+  justify-content: flex-start !important;
+}
+
+/* ===== Items alignment ===== */
+[dir="rtl"] .items-start {
+  align-items: flex-start !important;
+}
+
+/* ===== Translate centering fix ===== */
+[dir="rtl"] .left-1\/2.-translate-x-1\/2 {
+  left: auto !important;
+  right: 50% !important;
+  transform: translateX(50%) !important;
+}
+
+/* ===== Fixed navbar full-width ===== */
+[dir="rtl"] nav.fixed {
+  left: 0 !important;
+  right: 0 !important;
+}
+
+/* ===== Form inputs ===== */
 [dir="rtl"] input,
 [dir="rtl"] textarea,
-[dir="rtl"] select,
-[dir="rtl"] blockquote,
-[dir="rtl"] figcaption,
-[dir="rtl"] img,
-[dir="rtl"] video,
-[dir="rtl"] canvas,
-[dir="rtl"] svg {
-  transform: scaleX(-1);
+[dir="rtl"] select {
+  text-align: right;
 }
 
 /* Scrollbar */
