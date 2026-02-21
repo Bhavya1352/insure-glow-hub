@@ -87,12 +87,12 @@ const WhyUsSection = () => {
                                 {/* Step Node */}
                                 <div className="flex justify-center mb-12 relative lg:z-10">
                                     <div className={`w-20 h-20 rounded-[2rem] bg-background border-2 flex items-center justify-center shadow-premium transition-all duration-500 ${step.status === 'critical' ? 'border-rose-500/50 shadow-rose-500/10' :
-                                            step.status === 'complete' ? 'border-emerald-500/50 shadow-emerald-500/10' :
-                                                'border-purple-500/50 shadow-purple-500/10'
+                                        step.status === 'complete' ? 'border-emerald-500/50 shadow-emerald-500/10' :
+                                            'border-purple-500/50 shadow-purple-500/10'
                                         }`}>
                                         <step.icon className={`w-8 h-8 ${step.status === 'critical' ? 'text-rose-500' :
-                                                step.status === 'complete' ? 'text-emerald-500' :
-                                                    'text-purple-500'
+                                            step.status === 'complete' ? 'text-emerald-500' :
+                                                'text-purple-500'
                                             }`} />
                                     </div>
                                     <div className="absolute -top-2 -right-2 px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[8px] font-black text-white/60">
@@ -134,7 +134,10 @@ const WhyUsSection = () => {
                             <p className="text-sm text-muted-foreground">Our Rapid Response Unit is standing by 24/7/365.</p>
                         </div>
                     </div>
-                    <button className="px-8 py-4 rounded-2xl bg-white text-black font-black text-sm shadow-premium hover:scale-105 active:scale-95 transition-all flex items-center gap-3">
+                    <button
+                        onClick={() => window.dispatchEvent(new CustomEvent('open-advocacy-chat'))}
+                        className="px-8 py-4 rounded-2xl bg-white text-black font-black text-sm shadow-premium hover:scale-105 active:scale-95 transition-all flex items-center gap-3"
+                    >
                         <PhoneCall className="w-4 h-4" /> Call Advocate Now
                     </button>
                 </motion.div>

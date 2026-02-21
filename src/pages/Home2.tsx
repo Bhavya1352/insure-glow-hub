@@ -58,7 +58,12 @@ const Home2 = () => {
                     <p className="text-muted-foreground mt-2 max-w-lg text-sm">Your Protection DNA is running at peak integrity. All regulatory layers are active and verified for the current cycle.</p>
                 </div>
                 <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
-                    <button className="px-5 py-2.5 rounded-xl border border-white/5 bg-white/5 font-black uppercase tracking-widest text-[10px] transition-all hover:bg-white/10">Advocacy Desk</button>
+                    <button
+                        onClick={() => window.dispatchEvent(new CustomEvent('open-advocacy-chat'))}
+                        className="px-5 py-2.5 rounded-xl border border-white/5 bg-white/5 font-black uppercase tracking-widest text-[10px] transition-all hover:bg-white/10"
+                    >
+                        Advocacy Desk
+                    </button>
                     <button className="px-5 py-2.5 rounded-xl bg-white text-black font-black uppercase tracking-widest text-[10px] shadow-premium flex items-center justify-center gap-2 transition-transform hover:scale-105 active:scale-95"><Plus className="w-4 h-4" /> Expand Matrix</button>
                 </div>
             </motion.div>
