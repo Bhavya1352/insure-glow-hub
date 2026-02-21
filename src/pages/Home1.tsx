@@ -22,9 +22,9 @@ const Home1 = () => {
             {/* Hero Section */}
             <section className="relative pt-28 md:pt-48 pb-16 md:pb-32 overflow-hidden bg-[#050608]">
                 {/* Abstract Background Glows */}
-                <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
-                    <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-purple-600/10 blur-[150px] rounded-full" />
-                    <div className="absolute bottom-[20%] right-[-5%] w-[40%] h-[40%] bg-blue-600/10 blur-[150px] rounded-full" />
+                <div className="absolute top-0 inset-x-0 h-full pointer-events-none">
+                    <div className="absolute top-[-10%] start-[-10%] w-[50%] h-[50%] bg-purple-600/10 blur-[150px] rounded-full" />
+                    <div className="absolute bottom-[20%] end-[-5%] w-[40%] h-[40%] bg-blue-600/10 blur-[150px] rounded-full" />
                 </div>
 
                 <div className="max-w-7xl mx-auto px-6 relative text-center">
@@ -83,7 +83,7 @@ const Home1 = () => {
                                 <div className="w-2.5 h-2.5 rounded-full bg-amber-500" />
                                 <div className="w-2.5 h-2.5 rounded-full bg-emerald-500" />
                             </div>
-                            <div className="p-6 text-left font-mono text-sm sm:text-base leading-relaxed overflow-x-auto whitespace-nowrap scrollbar-hide">
+                            <div className="p-6 text-start font-mono text-sm sm:text-base leading-relaxed overflow-x-auto whitespace-nowrap scrollbar-hide">
                                 <div className="flex gap-4">
                                     <span className="text-white/20 select-none">1</span>
                                     <span className="text-purple-400">npm install</span>
@@ -246,24 +246,24 @@ const Home1 = () => {
                     <p className="text-muted-foreground uppercase tracking-widest text-[10px] font-black mb-20 italic">Powerful features integrated into a single API</p>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                        <div className="p-6 md:p-12 rounded-2xl md:rounded-[3.5rem] bg-gradient-to-br from-white/5 to-transparent border border-white/10 text-left group overflow-hidden relative">
+                        <div className="p-6 md:p-12 rounded-2xl md:rounded-[3.5rem] bg-gradient-to-br from-white/5 to-transparent border border-white/10 text-start group overflow-hidden relative">
                             <div className="relative z-10">
                                 <ShieldCheck className="w-10 h-10 text-emerald-500 mb-6" />
                                 <h3 className="text-2xl font-display font-black text-white mb-4 italic">DDoS Protection</h3>
                                 <p className="text-muted-foreground text-sm leading-relaxed max-w-sm">Built-in high-volume traffic filtering and auto-scaling to keep your applications online even under massive attacks.</p>
                             </div>
-                            <div className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-emerald-500/5 blur-[80px] rounded-full group-hover:scale-110 transition-transform" />
+                            <div className="absolute bottom-[-10%] end-[-10%] w-[60%] h-[60%] bg-emerald-500/5 blur-[80px] rounded-full group-hover:scale-110 transition-transform" />
                         </div>
 
-                        <div className="p-6 md:p-12 rounded-2xl md:rounded-[3.5rem] bg-gradient-to-br from-white/5 to-transparent border border-white/10 text-left group overflow-hidden relative">
+                        <div className="p-6 md:p-12 rounded-2xl md:rounded-[3.5rem] bg-gradient-to-br from-white/5 to-transparent border border-white/10 text-start group overflow-hidden relative">
                             <div className="relative z-10">
                                 <Globe className="w-10 h-10 text-blue-500 mb-6" />
                                 <h3 className="text-2xl font-display font-black text-white mb-4 italic">Global Edge Network</h3>
                                 <p className="text-muted-foreground text-sm leading-relaxed max-w-sm">Cache content closer to users with our over 40+ global points of presence for zero-latency dynamic content.</p>
                             </div>
-                            <div className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-blue-500/5 blur-[80px] rounded-full group-hover:scale-110 transition-transform" />
+                            <div className="absolute bottom-[-10%] end-[-10%] w-[60%] h-[60%] bg-blue-500/5 blur-[80px] rounded-full group-hover:scale-110 transition-transform" />
                             {/* Abstract Map Nodes Visualization */}
-                            <div className="absolute bottom-10 right-10 flex flex-col gap-2 items-end">
+                            <div className="absolute bottom-10 end-10 flex flex-col gap-2 items-end">
                                 <div className="w-32 h-1 bg-white/5 rounded-full overflow-hidden">
                                     <motion.div initial={{ width: 0 }} whileInView={{ width: '70%' }} className="h-full bg-blue-500" />
                                 </div>
@@ -277,14 +277,14 @@ const Home1 = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         <div className="md:col-span-2 p-6 md:p-10 rounded-2xl md:rounded-[2.5rem] bg-[#0a0c10] border border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 md:gap-10">
-                            <div className="text-left">
+                            <div className="text-start">
                                 <h3 className="text-xl font-display font-black text-white mb-2 italic">Real-time Analytics</h3>
                                 <p className="text-muted-foreground text-xs leading-relaxed max-w-xs italic">Monitor your API usage, latency, and errors in real-time with zero configuration.</p>
                                 <Link to="/dashboard" className="mt-6 flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-purple-500 group">
-                                    View Dashboard <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+                                    View Dashboard <ArrowRight className="w-3 h-3 group-hover:translate-x-1 rtl:group-hover:-translate-x-1 transition-transform" />
                                 </Link>
                             </div>
-                            <div className="w-full md:w-auto flex items-end gap-1.5 h-24 px-4 border-l border-white/5">
+                            <div className="w-full md:w-auto flex items-end gap-1.5 h-24 px-4 border-s border-white/5">
                                 {[30, 50, 40, 80, 60, 70, 40, 60].map((h, i) => (
                                     <div key={i} style={{ height: `${h}%` }} className="w-4 bg-purple-500/20 rounded-t-md" />
                                 ))}

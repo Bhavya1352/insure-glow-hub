@@ -21,8 +21,8 @@ const Contact = () => {
                             transition={{ delay: 0.1 }}
                             className="text-4xl sm:text-6xl md:text-7xl font-display font-black text-white leading-[0.9] tracking-tighter mb-8 uppercase italic"
                         >
-                            Let's build a <br />
-                            <span className="text-gradient-purple">safer web</span>
+                            Protecting your <br />
+                            <span className="text-gradient-purple">Digital Legacy</span>
                         </motion.h1>
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
@@ -30,14 +30,14 @@ const Contact = () => {
                             transition={{ delay: 0.2 }}
                             className="text-muted-foreground text-lg mb-12 italic leading-relaxed max-w-lg"
                         >
-                            Have questions about our API, enterprise pricing, or security matrix? Our team of engineers is ready to help you initialize.
+                            Have questions about our Protection Matrix, Elite tiers, or Technical Advocacy? Our squad of advisors is ready to help you initialize.
                         </motion.p>
 
                         <div className="space-y-8">
                             {[
-                                { icon: Mail, title: "Email", value: "ops@orbitscale.dev", sub: "Standard support: < 24h" },
-                                { icon: MessageSquare, title: "Discord", value: "OrbitScale Dev Hub", sub: "Live community support" },
-                                { icon: Globe, title: "Main Office", value: "San Francisco, CA", sub: "Mission District HQ" }
+                                { icon: Mail, title: "Advocacy Info", value: "ops@glowinsure.com", sub: "Priority Support: < 15m" },
+                                { icon: MessageSquare, title: "Vault Discord", value: "GlowHub Security Council", sub: "Live technical advocacy" },
+                                { icon: Globe, title: "World HQ", value: "San Francisco, CA", sub: "Global Coordination Center" }
                             ].map((item, i) => (
                                 <motion.div
                                     key={item.title}
@@ -74,7 +74,7 @@ const Contact = () => {
                         <form className="space-y-6">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div className="space-y-2">
-                                    <label className="text-[10px] font-black text-white/40 uppercase tracking-widest ml-1">Full Name</label>
+                                    <label className="text-[10px] font-black text-white/40 uppercase tracking-widest ms-1">Full Name</label>
                                     <input
                                         type="text"
                                         placeholder="John Doe"
@@ -82,7 +82,7 @@ const Contact = () => {
                                     />
                                 </div>
                                 <div className="space-y-2">
-                                    <label className="text-[10px] font-black text-white/40 uppercase tracking-widest ml-1">Work Email</label>
+                                    <label className="text-[10px] font-black text-white/40 uppercase tracking-widest ms-1">Primary Email</label>
                                     <input
                                         type="email"
                                         placeholder="john@company.com"
@@ -92,17 +92,17 @@ const Contact = () => {
                             </div>
 
                             <div className="space-y-2">
-                                <label className="text-[10px] font-black text-white/40 uppercase tracking-widest ml-1">Subject</label>
+                                <label className="text-[10px] font-black text-white/40 uppercase tracking-widest ms-1">Subject</label>
                                 <select className="w-full px-6 py-4 rounded-2xl bg-[#0a0c10] border border-white/5 focus:border-purple-500/50 outline-none text-sm text-white transition-all appearance-none cursor-pointer italic">
-                                    <option>General Inquiry</option>
-                                    <option>Enterprise Sales</option>
-                                    <option>Security Reports</option>
-                                    <option>Technical Support</option>
+                                    <option>General Support</option>
+                                    <option>Elite Tier Inquiry</option>
+                                    <option>Claim Advocacy</option>
+                                    <option>Security Matrix Audit</option>
                                 </select>
                             </div>
 
                             <div className="space-y-2">
-                                <label className="text-[10px] font-black text-white/40 uppercase tracking-widest ml-1">Command / Message</label>
+                                <label className="text-[10px] font-black text-white/40 uppercase tracking-widest ms-1">Safety Requirements</label>
                                 <textarea
                                     rows={5}
                                     placeholder="Describe your architecture and requirements..."

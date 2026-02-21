@@ -48,7 +48,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 py-3 md:py-10">
+    <nav className="fixed top-0 inset-x-0 z-50 py-3 md:py-10">
       <div className="max-w-7xl mx-auto px-3 md:px-6">
         <div className="flex items-center justify-between h-16 md:h-20 px-4 md:px-8 rounded-2xl md:rounded-[2.5rem] bg-black/40 backdrop-blur-3xl border border-white/5 shadow-2xl">
           {/* Logo */}
@@ -78,7 +78,7 @@ const Navbar = () => {
                       initial={{ opacity: 0, y: 10, scale: 0.95 }}
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                      className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-72 p-4 rounded-[2rem] bg-[#0a0c10] border border-white/10 shadow-premium backdrop-blur-2xl"
+                      className="absolute top-full start-1/2 -translate-x-1/2 [dir=rtl]:translate-x-1/2 mt-4 w-72 p-4 rounded-[2rem] bg-[#0a0c10] border border-white/10 shadow-premium backdrop-blur-2xl"
                     >
                       {items.map((item) => (
                         <Link

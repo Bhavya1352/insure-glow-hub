@@ -29,7 +29,7 @@ const About = () => {
                         transition={{ delay: 0.2 }}
                         className="text-muted-foreground text-xl md:text-2xl max-w-3xl leading-relaxed italic"
                     >
-                        We believe that security shouldn't be a bottleneck. OrbitScale was born from a simple idea: make the world's most powerful protection matrix accessible through a single, elegant API.
+                        We believe that security shouldn't be a bottleneck. GlowInsure was born from a simple idea: make the world's most powerful protection matrix accessible through technical advocacy and human-centered design.
                     </motion.p>
                 </div>
 
@@ -77,8 +77,8 @@ const About = () => {
                         className="p-6 md:p-10 rounded-2xl md:rounded-[3.5rem] bg-[#0a0c10] border border-white/5 relative overflow-hidden aspect-square flex items-center justify-center"
                     >
                         <div className="absolute inset-0 opacity-20">
-                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] border-[1px] border-white/10 rounded-full animate-spin-slow" />
-                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100%] h-[100%] border-[1px] border-white/10 rounded-full animate-spin-slow reverse" />
+                            <div className="absolute top-1/2 start-1/2 -translate-x-1/2 [dir=rtl]:translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] border-[1px] border-white/10 rounded-full animate-spin-slow" />
+                            <div className="absolute top-1/2 start-1/2 -translate-x-1/2 [dir=rtl]:translate-x-1/2 -translate-y-1/2 w-[100%] h-[100%] border-[1px] border-white/10 rounded-full animate-spin-slow reverse" />
                         </div>
                         <div className="relative text-center">
                             <Shield className="w-24 h-24 text-purple-500 mx-auto mb-8 animate-pulse" />
@@ -124,18 +124,18 @@ const About = () => {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center relative z-10">
                         <div>
                             <p className="text-3xl md:text-5xl font-display font-black text-white mb-2 italic">40+</p>
-                            <p className="text-[10px] font-black text-white/40 uppercase tracking-widest">Global Edge Nodes</p>
+                            <p className="text-[10px] font-black text-white/40 uppercase tracking-widest">Global Assist Nodes</p>
                         </div>
                         <div>
-                            <p className="text-3xl md:text-5xl font-display font-black text-white mb-2 italic">20M+</p>
-                            <p className="text-[10px] font-black text-white/40 uppercase tracking-widest">Threats Blocked Daily</p>
+                            <p className="text-3xl md:text-5xl font-display font-black text-white mb-2 italic">₹2.4B+</p>
+                            <p className="text-[10px] font-black text-white/40 uppercase tracking-widest">Claims Settled Yearly</p>
                         </div>
                         <div>
                             <p className="text-3xl md:text-5xl font-display font-black text-white mb-2 italic">12k+</p>
-                            <p className="text-[10px] font-black text-white/40 uppercase tracking-widest">Modern Teams Scaling</p>
+                            <p className="text-[10px] font-black text-white/40 uppercase tracking-widest">Legacies Protected</p>
                         </div>
                     </div>
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-purple-500/5 blur-[120px] rounded-full" />
+                    <div className="absolute top-1/2 start-1/2 -translate-x-1/2 [dir=rtl]:translate-x-1/2 -translate-y-1/2 w-full h-full bg-purple-500/5 blur-[120px] rounded-full" />
                 </div>
             </div>
         </div>

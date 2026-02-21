@@ -95,7 +95,7 @@ const WhyUsSection = () => {
                                                 'text-purple-500'
                                             }`} />
                                     </div>
-                                    <div className="absolute -top-2 -right-2 px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[8px] font-black text-white/60">
+                                    <div className="absolute -top-2 -end-2 px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[8px] font-black text-white/60">
                                         {step.time}
                                     </div>
                                 </div>

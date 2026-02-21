@@ -279,22 +279,16 @@
   text-align: right;
 }
 
-/* ===== Hero section text reversal — characters reverse on RTL toggle ===== */
-[dir="rtl"] section:first-of-type h1,
-[dir="rtl"] section:first-of-type h2,
-[dir="rtl"] section:first-of-type h3,
-[dir="rtl"] section:first-of-type p,
-[dir="rtl"] section:first-of-type span,
-[dir="rtl"] section:first-of-type a,
-[dir="rtl"] section:first-of-type button {
-  unicode-bidi: bidi-override;
-  direction: rtl;
+/* ===== Core RTL: Text & Direction ===== */
+[dir="rtl"] {
+  text-align: right;
 }
 
 [dir="rtl"] .text-center {
   text-align: center !important;
 }
 
+/* Logical property replacements for common Tailwind classes */
 [dir="rtl"] .text-left {
   text-align: right !important;
 }
@@ -313,28 +307,6 @@
 
 [dir="rtl"] .lg\:text-left {
   text-align: right !important;
-}
-
-/* ===== Core RTL: Flex Direction Reversal ===== */
-/* This is the KEY rule — reverses all flex-row containers */
-[dir="rtl"] .flex-row {
-  flex-direction: row-reverse !important;
-}
-
-[dir="rtl"] .md\:flex-row {
-  flex-direction: row-reverse !important;
-}
-
-[dir="rtl"] .lg\:flex-row {
-  flex-direction: row-reverse !important;
-}
-
-[dir="rtl"] .xl\:flex-row {
-  flex-direction: row-reverse !important;
-}
-
-[dir="rtl"] .flex-row-reverse {
-  flex-direction: row !important;
 }
 
 /* ===== Margins: ml ↔ mr ===== */

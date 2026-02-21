@@ -76,7 +76,7 @@ const CoverageSection = () => {
               <span className="text-gradient-purple">Protection Matrix</span>
             </h2>
           </div>
-          <p className="text-muted-foreground max-w-sm text-sm leading-relaxed border-l border-white/10 pl-6">
+          <p className="text-muted-foreground max-w-sm text-sm leading-relaxed border-s border-white/10 ps-6">
             Generic insurance is a thing of the past. Build your tailored defense with our core layers and specialized boosters.
           </p>
         </div>
@@ -91,7 +91,7 @@ const CoverageSection = () => {
                 <button
                   key={layer.id}
                   onClick={() => setActiveCategory(layer.id)}
-                  className={`w-full group relative p-5 md:p-8 rounded-2xl md:rounded-[2.5rem] border transition-all text-left overflow-hidden ${isActive
+                  className={`w-full group relative p-5 md:p-8 rounded-2xl md:rounded-[2.5rem] border transition-all text-start overflow-hidden ${isActive
                     ? `bg-${layer.color}-500/10 border-${layer.color}-500/50 shadow-premium`
                     : 'bg-white/[0.02] border-white/5 hover:border-white/10'
                     }`}
@@ -143,7 +143,7 @@ const CoverageSection = () => {
                       <h4 className="text-xl sm:text-2xl md:text-3xl font-display font-black text-white mb-2">{activeData?.base.title}</h4>
                       <p className="text-muted-foreground max-w-md">{activeData?.base.desc}</p>
                     </div>
-                    <div className="text-right">
+                    <div className="text-end">
                       <p className="text-2xl md:text-4xl font-display font-black text-white">{activeData?.base.price}</p>
                       <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest mt-1">Starting Premium</p>
                     </div>
@@ -166,7 +166,7 @@ const CoverageSection = () => {
                         key={booster.id}
                         className="group p-4 md:p-6 rounded-2xl md:rounded-[2.5rem] border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] hover:border-white/10 transition-all cursor-pointer relative overflow-hidden"
                       >
-                        <div className={`absolute top-0 right-0 w-16 h-16 bg-${activeData?.color}-500 opacity-0 group-hover:opacity-10 blur-2xl transition-opacity`} />
+                        <div className={`absolute top-0 end-0 w-16 h-16 bg-${activeData?.color}-500 opacity-0 group-hover:opacity-10 blur-2xl transition-opacity`} />
 
                         <div className="flex justify-between items-start mb-4">
                           <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center border border-white/5">
@@ -188,7 +188,7 @@ const CoverageSection = () => {
                 {/* Matrix Footer Call to Action */}
                 <div className="mt-12 pt-8 border-t border-white/10 flex flex-wrap items-center justify-between gap-6">
                   <div className="flex items-center gap-4">
-                    <div className="flex -space-x-3">
+                    <div className="flex -space-x-3 rtl:space-x-reverse">
                       {[1, 2, 3].map(i => (
                         <div key={i} className="w-10 h-10 rounded-full border-2 border-[#0a0c10] bg-muted flex items-center justify-center text-[10px] font-bold">U{i}</div>
                       ))}
