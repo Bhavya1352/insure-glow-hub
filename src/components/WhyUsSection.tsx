@@ -55,7 +55,7 @@ const WhyUsSection = () => {
                     >
                         <PhoneCall className="w-3 h-3" /> 24/7 Human Advocacy
                     </motion.div>
-                    <h2 className="text-4xl md:text-6xl font-display font-black text-white mb-6">
+                    <h2 className="text-3xl sm:text-4xl md:text-6xl font-display font-black text-white mb-6">
                         The Claims <br />
                         <span className="text-gradient-purple">Advocacy Trail</span>
                     </h2>
@@ -75,7 +75,7 @@ const WhyUsSection = () => {
                         />
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
                         {trailSteps.map((step, i) => (
                             <motion.div
                                 key={step.id}
@@ -101,7 +101,7 @@ const WhyUsSection = () => {
                                 </div>
 
                                 {/* Content Card */}
-                                <div className="p-8 rounded-[2.5rem] bg-[#0a0c10]/60 backdrop-blur-xl border border-white/5 group-hover:border-white/10 transition-all text-center">
+                                <div className="p-5 md:p-8 rounded-2xl md:rounded-[2.5rem] bg-[#0a0c10]/60 backdrop-blur-xl border border-white/5 group-hover:border-white/10 transition-all text-center">
                                     <h3 className="text-xl font-display font-black text-white mb-4">{step.title}</h3>
                                     <p className="text-xs text-muted-foreground leading-relaxed mb-6">
                                         {step.desc}
@@ -123,7 +123,7 @@ const WhyUsSection = () => {
                 <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
-                    className="mt-20 p-8 rounded-[3rem] bg-gradient-to-r from-purple-500/5 to-emerald-500/5 border border-white/5 flex flex-col md:flex-row items-center justify-between gap-8"
+                    className="mt-16 md:mt-20 p-5 md:p-8 rounded-2xl md:rounded-[3rem] bg-gradient-to-r from-purple-500/5 to-emerald-500/5 border border-white/5 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8"
                 >
                     <div className="flex items-center gap-6">
                         <div className="w-16 h-16 rounded-2xl bg-white/5 flex items-center justify-center">

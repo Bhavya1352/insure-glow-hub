@@ -20,7 +20,7 @@ const Home1 = () => {
     return (
         <div className="relative">
             {/* Hero Section */}
-            <section className="relative pt-48 pb-32 overflow-hidden bg-[#050608]">
+            <section className="relative pt-28 md:pt-48 pb-16 md:pb-32 overflow-hidden bg-[#050608]">
                 {/* Abstract Background Glows */}
                 <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
                     <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-purple-600/10 blur-[150px] rounded-full" />
@@ -40,7 +40,7 @@ const Home1 = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.1 }}
-                        className="text-6xl md:text-8xl lg:text-[7rem] font-display font-black text-white leading-[0.9] tracking-tighter mb-8"
+                        className="text-4xl sm:text-6xl md:text-8xl lg:text-[7rem] font-display font-black text-white leading-[0.9] tracking-tighter mb-8"
                     >
                         .The API for <br />
                         <span className="text-gradient-purple">modern teams</span>
@@ -139,7 +139,7 @@ const Home1 = () => {
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ delay: i * 0.1 }}
-                                className="group p-10 rounded-[2.5rem] bg-[#0a0c10] border border-white/5 hover:border-white/20 transition-all text-center"
+                                className="group p-6 md:p-10 rounded-2xl md:rounded-[2.5rem] bg-[#0a0c10] border border-white/5 hover:border-white/20 transition-all text-center"
                             >
                                 <div className={`w-14 h-14 rounded-2xl bg-${item.color}-500/10 border border-${item.color}-500/20 flex items-center justify-center mx-auto mb-8 text-${item.color}-500 group-hover:scale-110 transition-transform`}>
                                     <item.icon className="w-7 h-7" />
@@ -246,7 +246,7 @@ const Home1 = () => {
                     <p className="text-muted-foreground uppercase tracking-widest text-[10px] font-black mb-20 italic">Powerful features integrated into a single API</p>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                        <div className="p-12 rounded-[3.5rem] bg-gradient-to-br from-white/5 to-transparent border border-white/10 text-left group overflow-hidden relative">
+                        <div className="p-6 md:p-12 rounded-2xl md:rounded-[3.5rem] bg-gradient-to-br from-white/5 to-transparent border border-white/10 text-left group overflow-hidden relative">
                             <div className="relative z-10">
                                 <ShieldCheck className="w-10 h-10 text-emerald-500 mb-6" />
                                 <h3 className="text-2xl font-display font-black text-white mb-4 italic">DDoS Protection</h3>
@@ -255,7 +255,7 @@ const Home1 = () => {
                             <div className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-emerald-500/5 blur-[80px] rounded-full group-hover:scale-110 transition-transform" />
                         </div>
 
-                        <div className="p-12 rounded-[3.5rem] bg-gradient-to-br from-white/5 to-transparent border border-white/10 text-left group overflow-hidden relative">
+                        <div className="p-6 md:p-12 rounded-2xl md:rounded-[3.5rem] bg-gradient-to-br from-white/5 to-transparent border border-white/10 text-left group overflow-hidden relative">
                             <div className="relative z-10">
                                 <Globe className="w-10 h-10 text-blue-500 mb-6" />
                                 <h3 className="text-2xl font-display font-black text-white mb-4 italic">Global Edge Network</h3>
@@ -276,7 +276,7 @@ const Home1 = () => {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div className="md:col-span-2 p-10 rounded-[2.5rem] bg-[#0a0c10] border border-white/5 flex flex-col md:flex-row justify-between items-center gap-10">
+                        <div className="md:col-span-2 p-6 md:p-10 rounded-2xl md:rounded-[2.5rem] bg-[#0a0c10] border border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 md:gap-10">
                             <div className="text-left">
                                 <h3 className="text-xl font-display font-black text-white mb-2 italic">Real-time Analytics</h3>
                                 <p className="text-muted-foreground text-xs leading-relaxed max-w-xs italic">Monitor your API usage, latency, and errors in real-time with zero configuration.</p>
@@ -291,7 +291,7 @@ const Home1 = () => {
                             </div>
                         </div>
 
-                        <div className="p-10 rounded-[2.5rem] bg-[#0a0c10] border border-white/5 text-center group">
+                        <div className="p-6 md:p-10 rounded-2xl md:rounded-[2.5rem] bg-[#0a0c10] border border-white/5 text-center group">
                             <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mx-auto mb-6 text-white group-hover:rotate-[360deg] transition-transform duration-700">
                                 <Layers className="w-6 h-6" />
                             </div>

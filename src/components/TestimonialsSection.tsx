@@ -49,7 +49,7 @@ const TestimonialsSection = () => {
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="text-4xl md:text-6xl font-display font-black text-white mb-6"
+          className="text-3xl sm:text-4xl md:text-6xl font-display font-black text-white mb-6"
         >
           Resolved Claims & <br />
           <span className="text-gradient-purple">Settlement Stories</span>
@@ -66,13 +66,13 @@ const TestimonialsSection = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1 }}
-              className="group relative bg-[#0a0c10]/60 backdrop-blur-xl border border-white/5 rounded-[3rem] p-10 hover:bg-white/[0.04] transition-all hover:border-white/10 overflow-hidden"
+              className="group relative bg-[#0a0c10]/60 backdrop-blur-xl border border-white/5 rounded-2xl md:rounded-[3rem] p-6 md:p-10 hover:bg-white/[0.04] transition-all hover:border-white/10 overflow-hidden"
             >
               {/* Claim Amount Badge */}
-              <div className="flex justify-between items-start mb-10">
+              <div className="flex justify-between items-start mb-6 md:mb-10">
                 <div className="space-y-1">
                   <p className={`text-[10px] font-black text-${item.color}-500 uppercase tracking-widest`}>Claim Settled</p>
-                  <h3 className="text-3xl font-display font-black text-white">{item.amount}</h3>
+                  <h3 className="text-xl md:text-3xl font-display font-black text-white">{item.amount}</h3>
                 </div>
                 <div className={`w-14 h-14 rounded-2xl bg-${item.color}-500/10 flex items-center justify-center border border-${item.color}-500/20`}>
                   <ShieldCheck className={`w-8 h-8 text-${item.color}-500`} />
@@ -110,7 +110,7 @@ const TestimonialsSection = () => {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          className="mt-20 flex flex-col md:flex-row items-center justify-center gap-12 border-t border-white/5 pt-12"
+          className="mt-16 md:mt-20 flex flex-col sm:flex-row items-center justify-center gap-6 md:gap-12 border-t border-white/5 pt-10 md:pt-12"
         >
           <div className="text-center">
             <p className="text-4xl font-display font-black text-white">99.2%</p>

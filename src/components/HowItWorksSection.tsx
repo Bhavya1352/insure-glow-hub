@@ -78,7 +78,7 @@ const HowItWorksSection = () => {
           {/* Central Line */}
           <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-purple-500 via-orange-500 to-emerald-500 -translate-x-1/2 hidden md:block" />
 
-          <div className="space-y-24">
+          <div className="space-y-10 md:space-y-24">
             {timelineSteps.map((step, i) => (
               <motion.div
                 key={step.title}
@@ -86,7 +86,7 @@ const HowItWorksSection = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.7, delay: i * 0.1 }}
-                className={`flex items-center justify-between w-full ${step.side === 'left' ? 'flex-row-reverse' : ''}`}
+                className={`flex flex-col md:flex-row items-center justify-between w-full ${step.side === 'left' ? 'md:flex-row-reverse' : ''}`}
               >
                 {/* Text Side */}
                 <div className="w-full md:w-[45%] text-left md:text-right group">
@@ -101,7 +101,7 @@ const HowItWorksSection = () => {
                 </div>
 
                 {/* Number Side */}
-                <div className="absolute left-1/2 -translate-x-1/2 flex items-center justify-center z-10">
+                <div className="absolute left-1/2 -translate-x-1/2 hidden md:flex items-center justify-center z-10">
                   <div className="w-12 h-12 rounded-full bg-background border-4 border-[#0a0c10] flex items-center justify-center shadow-premium">
                     <div className={`w-full h-full rounded-full flex items-center justify-center text-white font-bold text-sm ${i === 0 ? 'bg-purple-500' :
                       i === 1 ? 'bg-orange-500' :

@@ -40,11 +40,11 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-[#050608] border-t border-white/5 pt-32 pb-20 relative overflow-hidden">
+    <footer className="bg-[#050608] border-t border-white/5 pt-16 md:pt-32 pb-10 md:pb-20 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-12 mb-24">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 md:gap-12 mb-16 md:mb-24">
           {/* Brand Column */}
-          <div className="col-span-2">
+          <div className="sm:col-span-2">
             <Link to="/" className="flex items-center gap-3 group mb-8">
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-500 to-blue-500 p-2 flex items-center justify-center group-hover:rotate-12 transition-transform shadow-glow">
                 <ShieldCheck className="w-full h-full text-white" />
@@ -87,7 +87,7 @@ const Footer = () => {
           <p className="text-[10px] font-black text-white/20 uppercase tracking-[0.3em]">
             © 2026 OrbitScale Technologies. All rights reserved.
           </p>
-          <div className="flex items-center gap-8">
+          <div className="flex items-center gap-4 md:gap-8 flex-wrap justify-center md:justify-end">
             <Link to="#" className="text-[10px] font-black text-white/20 uppercase tracking-widest hover:text-white transition-colors">Privacy Policy</Link>
             <Link to="#" className="text-[10px] font-black text-white/20 uppercase tracking-widest hover:text-white transition-colors">Terms of Service</Link>
             <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-[9px] font-black text-emerald-500 uppercase tracking-widest">

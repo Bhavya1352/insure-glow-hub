@@ -68,7 +68,7 @@ const CTASection = () => {
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="text-4xl md:text-5xl lg:text-6xl font-display font-black text-white mb-8"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-black text-white mb-8"
         >
           Secure your <span className="text-gradient-purple font-italic">Protection Tier</span>
         </motion.h2>
@@ -96,14 +96,14 @@ const CTASection = () => {
         </div>
 
         {/* Pricing Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-32">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 mb-20 md:mb-32">
           {plans.map((plan, i) => (
             <motion.div
               key={plan.name}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1 }}
-              className={`group relative rounded-[3rem] p-10 border transition-all duration-500 ${plan.featured
+              className={`group relative rounded-2xl md:rounded-[3rem] p-6 md:p-10 border transition-all duration-500 ${plan.featured
                 ? 'bg-[#0a0c10] border-purple-500/30'
                 : 'bg-white/[0.02] border-white/5 hover:border-white/10'
                 }`}
@@ -151,7 +151,7 @@ const CTASection = () => {
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="relative rounded-[4rem] overflow-hidden bg-gradient-to-br from-[#0a0c10] via-[#1a0b2e] to-[#0a0c10] border-2 border-white/5 p-16 md:p-24 text-center group"
+          className="relative rounded-2xl md:rounded-[4rem] overflow-hidden bg-gradient-to-br from-[#0a0c10] via-[#1a0b2e] to-[#0a0c10] border-2 border-white/5 p-8 sm:p-12 md:p-16 lg:p-24 text-center group"
         >
           {/* Animated Matrix Grid Background */}
           <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
@@ -165,7 +165,7 @@ const CTASection = () => {
               <Lock className="w-10 h-10 text-purple-500" />
             </motion.div>
 
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-display font-black text-white mb-8 leading-[1.1]">
+            <h2 className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-display font-black text-white mb-6 md:mb-8 leading-[1.1]">
               Initialize your <br />
               <span className="text-gradient-purple italic">Security DNA</span>
             </h2>

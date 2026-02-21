@@ -34,14 +34,14 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-[100vh] flex items-center overflow-hidden bg-background pt-32 pb-20">
+    <section className="relative min-h-[100vh] flex items-center overflow-hidden bg-background pt-24 md:pt-32 pb-12 md:pb-20">
       {/* Dynamic Background Mesh */}
       <div className={`absolute inset-0 opacity-20 pointer-events-none transition-colors duration-1000 ${protectionFocus === 'family' ? 'bg-purple-900/20' :
         protectionFocus === 'individual' ? 'bg-orange-900/20' : 'bg-pink-900/20'
         }`} />
 
       <div className="relative max-w-7xl mx-auto px-6 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-16 items-center">
 
           {/* Left Column: Protection DNA Input */}
           <div className="lg:col-span-5 text-left order-2 lg:order-1">
@@ -54,12 +54,12 @@ const HeroSection = () => {
               Build Your Protection DNA
             </motion.div>
 
-            <h1 className="text-4xl md:text-7xl font-display font-black text-white leading-[1] mb-8">
+            <h1 className="text-3xl sm:text-4xl md:text-7xl font-display font-black text-white leading-[1] mb-6 md:mb-8">
               Analyze your <br />
               <span className="text-gradient-purple">Security Matrix</span>
             </h1>
 
-            <div className="space-y-10 mb-12">
+            <div className="space-y-6 md:space-y-10 mb-8 md:mb-12">
               {/* Focus Selector */}
               <div className="space-y-4">
                 <label className="text-xs font-bold text-muted-foreground uppercase tracking-widest block">1. I want to protect</label>
@@ -122,7 +122,7 @@ const HeroSection = () => {
           <div className="lg:col-span-6 relative order-1 lg:order-2 flex justify-center lg:justify-end">
             <motion.div
               layout
-              className="relative w-full max-w-[500px]"
+              className="relative w-full max-w-[280px] sm:max-w-[400px] md:max-w-[500px] mx-auto"
             >
               {/* Outer Glowing Ring */}
               <motion.div
@@ -132,7 +132,7 @@ const HeroSection = () => {
               />
 
               {/* Inner Shield Matrix */}
-              <div className="relative aspect-square rounded-full bg-[#0a0c10]/40 backdrop-blur-3xl border border-white/5 p-8 md:p-12 flex items-center justify-center overflow-hidden shadow-premium">
+              <div className="relative aspect-square rounded-full bg-[#0a0c10]/40 backdrop-blur-3xl border border-white/5 p-4 sm:p-8 md:p-12 flex items-center justify-center overflow-hidden shadow-premium">
                 {/* SVG Shield Visualization */}
                 <svg className="w-full h-full relative z-10" viewBox="0 0 200 200">
                   <defs>
@@ -174,7 +174,7 @@ const HeroSection = () => {
                     animate={{ scale: 1, opacity: 1 }}
                     className="text-center"
                   >
-                    <span className="text-4xl md:text-6xl font-display font-black text-white">{calculateRiskScore()}%</span>
+                    <span className="text-2xl sm:text-4xl md:text-6xl font-display font-black text-white">{calculateRiskScore()}%</span>
                     <p className="text-[10px] font-black text-muted-foreground uppercase tracking-[0.2em] mt-2">Coverage DNA</p>
                   </motion.div>
                 </div>
@@ -204,7 +204,7 @@ const HeroSection = () => {
 
               {/* Live Quote Indicator */}
               <motion.div
-                className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-full max-w-[300px] py-4 px-6 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 flex justify-between items-center shadow-premium"
+                className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-[90%] max-w-[300px] py-3 px-4 md:py-4 md:px-6 rounded-xl md:rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 flex justify-between items-center shadow-premium"
               >
                 <div>
                   <p className="text-[8px] font-black text-muted-foreground uppercase tracking-widest">Est. Premium</p>

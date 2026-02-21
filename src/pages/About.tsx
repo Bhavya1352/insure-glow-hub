@@ -3,10 +3,10 @@ import { Shield, Target, Users, Globe, ExternalLink, ArrowRight } from "lucide-r
 
 const About = () => {
     return (
-        <div className="pt-32 pb-24 bg-[#050608]">
+        <div className="pt-24 md:pt-32 pb-16 md:pb-24 bg-[#050608]">
             <div className="max-w-7xl mx-auto px-6">
                 {/* Hero Section */}
-                <div className="mb-32">
+                <div className="mb-16 md:mb-32">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -18,7 +18,7 @@ const About = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.1 }}
-                        className="text-6xl md:text-[8rem] font-display font-black text-white leading-[0.8] tracking-tighter mb-12"
+                        className="text-4xl sm:text-6xl md:text-[8rem] font-display font-black text-white leading-[0.8] tracking-tighter mb-8 md:mb-12"
                     >
                         Protecting the <br />
                         <span className="text-gradient-purple">internet's core</span>
@@ -34,7 +34,7 @@ const About = () => {
                 </div>
 
                 {/* Vision & Values */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-24 mb-32 items-center">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 mb-16 md:mb-32 items-center">
                     <div className="space-y-12">
                         {[
                             {
@@ -74,7 +74,7 @@ const About = () => {
                     <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
-                        className="p-10 rounded-[3.5rem] bg-[#0a0c10] border border-white/5 relative overflow-hidden aspect-square flex items-center justify-center"
+                        className="p-6 md:p-10 rounded-2xl md:rounded-[3.5rem] bg-[#0a0c10] border border-white/5 relative overflow-hidden aspect-square flex items-center justify-center"
                     >
                         <div className="absolute inset-0 opacity-20">
                             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] border-[1px] border-white/10 rounded-full animate-spin-slow" />
@@ -88,13 +88,13 @@ const About = () => {
                 </div>
 
                 {/* Team / Leadership Preview */}
-                <div className="mb-32">
-                    <div className="text-center mb-20">
-                        <h2 className="text-4xl md:text-6xl font-display font-black text-white italic tracking-tighter uppercase mb-6">Built by <span className="text-gradient-purple">engineers</span></h2>
+                <div className="mb-16 md:mb-32">
+                    <div className="text-center mb-12 md:mb-20">
+                        <h2 className="text-3xl sm:text-4xl md:text-6xl font-display font-black text-white italic tracking-tighter uppercase mb-6">Built by <span className="text-gradient-purple">engineers</span></h2>
                         <p className="text-muted-foreground uppercase tracking-widest text-[10px] font-black">Our team comes from background at some of the world's leading tech firms.</p>
                     </div>
 
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
                         {[
                             { name: "Alex Rivers", role: "CEO & Co-founder", prev: "ex-Stripe" },
                             { name: "Sarah Chen", role: "CTO", prev: "ex-Cloudflare" },
@@ -106,7 +106,7 @@ const About = () => {
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ delay: i * 0.1 }}
-                                className="group p-8 rounded-[2rem] bg-[#0a0c10] border border-white/5 text-center hover:border-white/20 transition-all"
+                                className="group p-5 md:p-8 rounded-2xl md:rounded-[2rem] bg-[#0a0c10] border border-white/5 text-center hover:border-white/20 transition-all"
                             >
                                 <div className="w-20 h-20 rounded-full bg-white/5 mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform">
                                     <Users className="w-8 h-8 text-white/20" />
@@ -120,18 +120,18 @@ const About = () => {
                 </div>
 
                 {/* Global Stats */}
-                <div className="p-16 rounded-[4rem] bg-gradient-to-br from-purple-600/20 to-transparent border border-white/10 relative overflow-hidden overflow-hidden">
+                <div className="p-8 sm:p-12 md:p-16 rounded-2xl md:rounded-[4rem] bg-gradient-to-br from-purple-600/20 to-transparent border border-white/10 relative overflow-hidden">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center relative z-10">
                         <div>
-                            <p className="text-5xl font-display font-black text-white mb-2 italic">40+</p>
+                            <p className="text-3xl md:text-5xl font-display font-black text-white mb-2 italic">40+</p>
                             <p className="text-[10px] font-black text-white/40 uppercase tracking-widest">Global Edge Nodes</p>
                         </div>
                         <div>
-                            <p className="text-5xl font-display font-black text-white mb-2 italic">20M+</p>
+                            <p className="text-3xl md:text-5xl font-display font-black text-white mb-2 italic">20M+</p>
                             <p className="text-[10px] font-black text-white/40 uppercase tracking-widest">Threats Blocked Daily</p>
                         </div>
                         <div>
-                            <p className="text-5xl font-display font-black text-white mb-2 italic">12k+</p>
+                            <p className="text-3xl md:text-5xl font-display font-black text-white mb-2 italic">12k+</p>
                             <p className="text-[10px] font-black text-white/40 uppercase tracking-widest">Modern Teams Scaling</p>
                         </div>
                     </div>

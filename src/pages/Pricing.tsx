@@ -61,11 +61,11 @@ const Pricing = () => {
     ];
 
     return (
-        <div className="pt-32 pb-24 bg-[#f8fafc]">
+        <div className="pt-24 md:pt-32 pb-16 md:pb-24 bg-[#f8fafc]">
             <div className="max-w-7xl mx-auto px-6">
                 {/* Header */}
-                <div className="text-center mb-24">
-                    <h1 className="text-5xl md:text-7xl font-display font-black text-[#0f172a] tracking-tight mb-8 leading-none">
+                <div className="text-center mb-12 md:mb-24">
+                    <h1 className="text-3xl sm:text-5xl md:text-7xl font-display font-black text-[#0f172a] tracking-tight mb-8 leading-none">
                         Simple, transparent pricing
                     </h1>
                     <p className="text-slate-500 text-lg font-medium mb-12">.Start for free, scale as you grow. No hidden fees</p>
@@ -86,11 +86,11 @@ const Pricing = () => {
                 </div>
 
                 {/* Pricing Cards */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-40">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 mb-20 md:mb-40">
                     {tiers.map((tier) => (
                         <div
                             key={tier.name}
-                            className={`relative p-10 rounded-[2.5rem] bg-white border flex flex-col ${tier.popular ? 'border-purple-500 shadow-2xl scale-105 z-10' : 'border-slate-100 shadow-sm'}`}
+                            className={`relative p-6 md:p-10 rounded-2xl md:rounded-[2.5rem] bg-white border flex flex-col ${tier.popular ? 'border-purple-500 shadow-2xl md:scale-105 z-10' : 'border-slate-100 shadow-sm'}`}
                         >
                             {tier.popular && (
                                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1.5 rounded-lg bg-purple-600 text-[9px] font-black uppercase tracking-widest text-white">
@@ -128,12 +128,12 @@ const Pricing = () => {
                 </div>
 
                 {/* Feature Comparison */}
-                <div className="mb-40">
-                    <div className="text-center mb-20">
-                        <h2 className="text-4xl font-display font-black text-[#0f172a] tracking-tight mb-4">Feature Comparison</h2>
+                <div className="mb-20 md:mb-40">
+                    <div className="text-center mb-12 md:mb-20">
+                        <h2 className="text-2xl sm:text-4xl font-display font-black text-[#0f172a] tracking-tight mb-4">Feature Comparison</h2>
                     </div>
 
-                    <div className="overflow-x-auto rounded-[2rem] border border-slate-100 shadow-sm">
+                    <div className="overflow-x-auto rounded-2xl md:rounded-[2rem] border border-slate-100 shadow-sm">
                         <table className="w-full text-left border-collapse bg-white">
                             <thead>
                                 <tr className="border-b border-slate-100">
@@ -163,15 +163,15 @@ const Pricing = () => {
                 </div>
 
                 {/* Testimonials */}
-                <div className="mb-40">
-                    <div className="text-center mb-20">
+                <div className="mb-20 md:mb-40">
+                    <div className="text-center mb-12 md:mb-20">
                         <h2 className="text-4xl font-display font-black text-[#0f172a] tracking-tight mb-2">Trusted by developers like you</h2>
                         <p className="text-xs text-slate-400 font-bold uppercase tracking-widest">Join thousands of satisfied customers who have scaled with us.</p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {testimonials.map((t, i) => (
-                            <div key={i} className="p-8 rounded-[2.5rem] bg-white border border-slate-100 shadow-sm relative group overflow-hidden">
+                            <div key={i} className="p-5 md:p-8 rounded-2xl md:rounded-[2.5rem] bg-white border border-slate-100 shadow-sm relative group overflow-hidden">
                                 {/* Top Floating Icon */}
                                 <div className={`absolute top-6 left-6 w-10 h-10 rounded-xl bg-${t.color}-500 flex items-center justify-center text-white shadow-lg`}>
                                     <Shield className="w-5 h-5" />
@@ -194,7 +194,7 @@ const Pricing = () => {
                 </div>
 
                 {/* Logos Bar */}
-                <div className="text-center mb-40 border-t border-slate-100 pt-20">
+                <div className="text-center mb-20 md:mb-40 border-t border-slate-100 pt-12 md:pt-20">
                     <p className="text-[10px] font-black text-slate-300 uppercase tracking-[0.5em] mb-12">Trusted by industry leaders</p>
                     <div className="flex flex-wrap justify-center items-center gap-16 opacity-30 grayscale saturate-0">
                         {['p', 'C', 'X', 'p', 'O', 'E'].map((l, i) => (
@@ -204,8 +204,8 @@ const Pricing = () => {
                 </div>
 
                 {/* FAQ Section */}
-                <div className="max-w-4xl mx-auto mb-40">
-                    <h2 className="text-4xl font-display font-black text-[#0f172a] tracking-tight text-center mb-20 uppercase italic">Frequently Asked Questions</h2>
+                <div className="max-w-4xl mx-auto mb-20 md:mb-40">
+                    <h2 className="text-2xl sm:text-4xl font-display font-black text-[#0f172a] tracking-tight text-center mb-12 md:mb-20 uppercase italic">Frequently Asked Questions</h2>
                     <div className="space-y-4">
                         {[
                             "Can I cancel at any time?",
@@ -213,7 +213,7 @@ const Pricing = () => {
                             "Do you offer discounts for open source projects?",
                             "Can I switch plans later?"
                         ].map((q, i) => (
-                            <div key={i} className="p-8 rounded-[1.5rem] bg-white border border-slate-100 flex items-center justify-between group cursor-pointer hover:border-purple-100 hover:shadow-lg transition-all">
+                            <div key={i} className="p-4 md:p-8 rounded-xl md:rounded-[1.5rem] bg-white border border-slate-100 flex items-center justify-between group cursor-pointer hover:border-purple-100 hover:shadow-lg transition-all">
                                 <div className="flex items-center gap-6">
                                     <div className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center group-hover:bg-purple-50 transition-colors">
                                         <ChevronDown className="w-4 h-4 text-slate-400 group-hover:text-purple-500" />

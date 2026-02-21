@@ -55,10 +55,10 @@ const Solutions = () => {
     ];
 
     return (
-        <div className="pt-32 pb-24 bg-[#f8fafc]">
+        <div className="pt-24 md:pt-32 pb-16 md:pb-24 bg-[#f8fafc]">
             <div className="max-w-7xl mx-auto px-6">
                 {/* Solutions Hero */}
-                <div className="text-center mb-32">
+                <div className="text-center mb-16 md:mb-32">
                     <motion.div
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -70,7 +70,7 @@ const Solutions = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.1 }}
-                        className="text-5xl md:text-7xl font-display font-black text-[#0f172a] leading-[1.1] tracking-tight mb-8"
+                        className="text-3xl sm:text-5xl md:text-7xl font-display font-black text-[#0f172a] leading-[1.1] tracking-tight mb-8"
                     >
                         .World-class engineering services
                     </motion.h1>
@@ -95,14 +95,14 @@ const Solutions = () => {
                 </div>
 
                 {/* Services Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-40">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-20 md:mb-40">
                     {services.map((service, i) => (
                         <motion.div
                             key={service.title}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: i * 0.1 }}
-                            className="p-10 rounded-[2.5rem] bg-white border border-slate-100 shadow-sm hover:shadow-xl transition-all group"
+                            className="p-6 md:p-10 rounded-2xl md:rounded-[2.5rem] bg-white border border-slate-100 shadow-sm hover:shadow-xl transition-all group"
                         >
                             <div className={`w-14 h-14 rounded-2xl bg-${service.color}-50 flex items-center justify-center text-${service.color}-500 mb-8 transition-transform group-hover:scale-110`}>
                                 <service.icon className="w-7 h-7" />
@@ -117,11 +117,11 @@ const Solutions = () => {
                 </div>
 
                 {/* How We Work Section (Reverse Step Grid) */}
-                <div className="text-center mb-40">
-                    <h2 className="text-4xl md:text-5xl font-display font-black text-[#0f172a] mb-4">How we work</h2>
-                    <p className="text-slate-500 font-medium mb-20 uppercase tracking-widest text-xs">A proven strategy for high growth</p>
+                <div className="text-center mb-20 md:mb-40">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-black text-[#0f172a] mb-4">How we work</h2>
+                    <p className="text-slate-500 font-medium mb-12 md:mb-20 uppercase tracking-widest text-xs">A proven strategy for high growth</p>
 
-                    <div className="grid grid-cols-1 md:grid-cols-4 gap-4 relative">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 relative">
                         {/* Connector Line */}
                         <div className="absolute top-1/2 left-0 w-full h-px bg-slate-100 -translate-y-1/2 hidden md:block" />
 
@@ -131,7 +131,7 @@ const Solutions = () => {
                                 initial={{ opacity: 0, scale: 0.9 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 transition={{ delay: i * 0.1 }}
-                                className="relative z-10 bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm text-center"
+                                className="relative z-10 bg-white p-5 md:p-8 rounded-2xl md:rounded-[2rem] border border-slate-100 shadow-sm text-center"
                             >
                                 <div className="w-12 h-12 rounded-full bg-[#0f172a] text-white flex items-center justify-center text-lg font-black mx-auto mb-6">
                                     {step.id}
@@ -144,31 +144,31 @@ const Solutions = () => {
                 </div>
 
                 {/* How we work with you (Vertical Timeline) */}
-                <div className="text-center mb-40">
-                    <h2 className="text-4xl md:text-5xl font-display font-black text-[#0f172a] mb-4">How we work with you</h2>
-                    <p className="text-slate-500 font-medium mb-20 uppercase tracking-widest text-xs">Our proven methodology for successful cloud transformations</p>
+                <div className="text-center mb-20 md:mb-40">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-black text-[#0f172a] mb-4">How we work with you</h2>
+                    <p className="text-slate-500 font-medium mb-12 md:mb-20 uppercase tracking-widest text-xs">Our proven methodology for successful cloud transformations</p>
 
                     <div className="max-w-4xl mx-auto relative px-6">
                         {/* Center Line */}
-                        <div className="absolute top-0 bottom-0 left-1/2 w-0.5 bg-gradient-to-b from-purple-500 via-pink-500 to-emerald-500 -translate-x-1/2" />
+                        <div className="absolute top-0 bottom-0 left-1/2 w-0.5 bg-gradient-to-b from-purple-500 via-pink-500 to-emerald-500 -translate-x-1/2 hidden md:block" />
 
-                        <div className="space-y-20">
+                        <div className="space-y-10 md:space-y-20">
                             {engagementTimeline.map((item, i) => (
                                 <motion.div
                                     key={item.id}
                                     initial={{ opacity: 0, x: i % 2 === 0 ? -50 : 50 }}
                                     whileInView={{ opacity: 1, x: 0 }}
-                                    className={`relative flex items-center ${i % 2 === 0 ? 'justify-start' : 'justify-end'}`}
+                                    className={`relative flex flex-col md:flex-row items-center ${i % 2 === 0 ? 'md:justify-start' : 'md:justify-end'}`}
                                 >
-                                    <div className={`w-1/2 px-10 ${i % 2 === 0 ? 'text-right' : 'text-left'}`}>
-                                        <div className="p-8 rounded-[2.5rem] bg-white border border-slate-100 shadow-lg relative overflow-hidden group">
+                                    <div className={`w-full md:w-1/2 md:px-10 ${i % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
+                                        <div className="p-5 md:p-8 rounded-2xl md:rounded-[2.5rem] bg-white border border-slate-100 shadow-lg relative overflow-hidden group">
                                             <h4 className="text-xl font-bold text-[#0f172a] mb-2">{item.title} .{item.id}</h4>
                                             <p className="text-sm text-slate-500 leading-relaxed font-medium">{item.desc}</p>
                                         </div>
                                     </div>
 
                                     {/* Node Circle */}
-                                    <div className="absolute left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-[#8b5cf6] border-4 border-white flex items-center justify-center text-white text-xs font-black shadow-lg z-20">
+                                    <div className="absolute left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-[#8b5cf6] border-4 border-white flex items-center justify-center text-white text-xs font-black shadow-lg z-20 hidden md:flex">
                                         {item.id}
                                     </div>
                                 </motion.div>

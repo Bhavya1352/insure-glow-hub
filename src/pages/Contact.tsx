@@ -3,9 +3,9 @@ import { Mail, MessageSquare, Phone, MapPin, Send, Globe, Github, Terminal } fro
 
 const Contact = () => {
     return (
-        <div className="pt-32 pb-24 bg-[#050608]">
+        <div className="pt-24 md:pt-32 pb-16 md:pb-24 bg-[#050608]">
             <div className="max-w-7xl mx-auto px-6">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-24 items-start">
                     {/* Left: Info */}
                     <div>
                         <motion.div
@@ -19,7 +19,7 @@ const Contact = () => {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.1 }}
-                            className="text-6xl md:text-7xl font-display font-black text-white leading-[0.9] tracking-tighter mb-8 uppercase italic"
+                            className="text-4xl sm:text-6xl md:text-7xl font-display font-black text-white leading-[0.9] tracking-tighter mb-8 uppercase italic"
                         >
                             Let's build a <br />
                             <span className="text-gradient-purple">safer web</span>
@@ -69,7 +69,7 @@ const Contact = () => {
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
-                        className="p-10 rounded-[3rem] bg-[#0a0c10] border border-white/5 shadow-glass w-full"
+                        className="p-6 md:p-10 rounded-2xl md:rounded-[3rem] bg-[#0a0c10] border border-white/5 shadow-glass w-full"
                     >
                         <form className="space-y-6">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

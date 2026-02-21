@@ -10,6 +10,7 @@ import {
   Code,
   Lock,
   Globe,
+
   LayoutDashboard,
   ShieldAlert,
   Users,
@@ -20,12 +21,14 @@ import {
   Key,
   Settings
 } from "lucide-react";
+import { useDirection } from "@/contexts/DirectionContext";
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const location = useLocation();
+  const { direction, toggleDirection } = useDirection();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -37,25 +40,23 @@ const Navbar = () => {
     Home: [
       { label: "Home 1", href: "/", icon: Activity },
       { label: "Home 2", href: "/home-2", icon: ShieldCheck },
-      { label: "Admin Console", href: "/admin", icon: Settings },
     ],
     Dashboards: [
       { label: "User Dashboard", href: "/dashboard", icon: LayoutDashboard },
-      { label: "Project Management", href: "#", icon: Folder },
-      { label: "API Console", href: "#", icon: Key },
+      { label: "Admin Dashboard", href: "/admin", icon: Settings },
     ]
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 py-10">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex items-center justify-between h-20 px-8 rounded-[2.5rem] bg-black/40 backdrop-blur-3xl border border-white/5 shadow-2xl">
+    <nav className="fixed top-0 left-0 w-full z-50 py-3 md:py-10">
+      <div className="max-w-7xl mx-auto px-3 md:px-6">
+        <div className="flex items-center justify-between h-16 md:h-20 px-4 md:px-8 rounded-2xl md:rounded-[2.5rem] bg-black/40 backdrop-blur-3xl border border-white/5 shadow-2xl">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-500 to-blue-500 p-2 flex items-center justify-center group-hover:rotate-12 transition-transform shadow-glow">
               <ShieldCheck className="w-full h-full text-white" />
             </div>
-            <span className="text-xl font-display font-black text-white italic tracking-tighter">Orbit.Scale</span>
+            <span className="hidden sm:inline text-xl font-display font-black text-white italic tracking-tighter">Orbit.Scale</span>
           </Link>
 
           {/* Nav Links */}
@@ -106,11 +107,20 @@ const Navbar = () => {
           </div>
 
           {/* Actions */}
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-2 md:gap-6">
             <Link to="/login" className="hidden lg:block text-[11px] font-black uppercase tracking-widest text-white/40 hover:text-white transition-colors">Log in</Link>
-            <Link to="/signup" className="px-6 py-3 rounded-xl bg-white text-black text-[11px] font-black uppercase tracking-widest hover:scale-105 active:scale-95 transition-all shadow-premium">
+            <Link to="/signup" className="hidden sm:inline-block px-4 md:px-6 py-2.5 md:py-3 rounded-xl bg-white text-black text-[10px] md:text-[11px] font-black uppercase tracking-widest hover:scale-105 active:scale-95 transition-all shadow-premium">
               Get Started
             </Link>
+
+            {/* RTL/LTR Toggle — Globe Icon */}
+            <button
+              onClick={toggleDirection}
+              className="w-9 h-9 md:w-10 md:h-10 rounded-lg md:rounded-xl border border-white/10 bg-white/5 flex items-center justify-center text-white/50 hover:text-white hover:bg-white/10 hover:border-white/20 transition-all"
+              title={direction === "ltr" ? "Switch to RTL" : "Switch to LTR"}
+            >
+              <Globe className="w-5 h-5" />
+            </button>
 
             {/* Mobile Menu Button */}
             <button
@@ -164,6 +174,24 @@ const Navbar = () => {
                     <Link to="/pricing" className="p-4 rounded-2xl bg-white/5 border border-white/5 text-[11px] font-black uppercase tracking-widest text-white" onClick={() => setMobileOpen(false)}>Pricing</Link>
                     <Link to="/about" className="p-4 rounded-2xl bg-white/5 border border-white/5 text-[11px] font-black uppercase tracking-widest text-white" onClick={() => setMobileOpen(false)}>About</Link>
                   </div>
+                </div>
+
+                {/* Direction Toggle in Mobile */}
+                <div className="pt-4 border-t border-white/5">
+                  <button
+                    onClick={toggleDirection}
+                    className="w-full flex items-center justify-between p-4 rounded-2xl bg-white/5 border border-white/5"
+                  >
+                    <div className="flex items-center gap-4">
+                      <Globe className="w-5 h-5 text-purple-500" />
+                      <span className="text-[11px] font-black uppercase tracking-widest text-white">
+                        {direction === "ltr" ? "Switch to RTL" : "Switch to LTR"}
+                      </span>
+                    </div>
+                    <span className="text-[10px] font-black text-purple-500 uppercase">
+                      {direction === "rtl" ? "LTR" : "RTL"}
+                    </span>
+                  </button>
                 </div>
 
                 <div className="flex gap-4 pt-4 border-t border-white/5">

@@ -25,7 +25,7 @@ const Home2 = () => {
     return (
         <div className="relative bg-[#050608]">
             {/* Insurance Hero - Protection DNA */}
-            <section className="relative pt-48 pb-32 overflow-hidden">
+            <section className="relative pt-28 md:pt-48 pb-16 md:pb-32 overflow-hidden">
                 {/* Background Aesthetics */}
                 <div className="absolute top-0 right-0 w-[60%] h-[60%] bg-emerald-500/5 blur-[200px] rounded-full pointer-events-none" />
                 <div className="absolute bottom-[-10%] left-[-10%] w-[50%] h-[50%] bg-blue-600/5 blur-[150px] rounded-full pointer-events-none" />
@@ -39,7 +39,7 @@ const Home2 = () => {
                             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-[10px] font-black uppercase tracking-widest text-emerald-500 mb-8">
                                 <ShieldCheck className="w-3 h-3" /> Licensed Claims Advocate Platform
                             </div>
-                            <h1 className="text-6xl md:text-8xl font-display font-black text-white leading-[0.8] tracking-tighter mb-8 uppercase italic">
+                            <h1 className="text-4xl sm:text-6xl md:text-8xl font-display font-black text-white leading-[0.8] tracking-tighter mb-8 uppercase italic">
                                 Protecting your <br />
                                 <span className="text-gradient-purple">family's future</span>
                             </h1>
@@ -61,7 +61,7 @@ const Home2 = () => {
                             initial={{ opacity: 0, scale: 0.95 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ delay: 0.2 }}
-                            className="relative p-10 rounded-[3.5rem] bg-[#0a0c10] border border-white/5 shadow-glass overflow-hidden group"
+                            className="relative p-6 md:p-10 rounded-2xl md:rounded-[3.5rem] bg-[#0a0c10] border border-white/5 shadow-glass overflow-hidden group"
                         >
                             <div className="flex items-center justify-between mb-12">
                                 <ShieldCheck className="w-12 h-12 text-emerald-500" />
@@ -71,7 +71,7 @@ const Home2 = () => {
                                 </div>
                             </div>
 
-                            <div className="space-y-6 mb-12">
+                            <div className="space-y-4 md:space-y-6 mb-8 md:mb-12">
                                 {[
                                     { label: "Critical Health DNA", value: "₹2.5 Cr Coverage", status: "Active" },
                                     { label: "Legacy Life Shield", value: "₹5.0 Cr Protection", status: "Active" },
@@ -105,7 +105,7 @@ const Home2 = () => {
             {/* Real-time Stats */}
             <section className="py-24 bg-[#050608] border-y border-white/5 overflow-hidden">
                 <div className="max-w-7xl mx-auto px-6">
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center md:text-left">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 text-center md:text-left">
                         {[
                             { label: "Settlement Velocity", val: "14h", sub: "Global Record" },
                             { label: "Claims Integrity", val: "99.4%", sub: "Verified Success" },
@@ -118,7 +118,7 @@ const Home2 = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ delay: i * 0.1 }}
                             >
-                                <p className="text-4xl md:text-5xl font-display font-black text-white italic mb-2 tracking-tighter">{s.val}</p>
+                                <p className="text-3xl sm:text-4xl md:text-5xl font-display font-black text-white italic mb-2 tracking-tighter">{s.val}</p>
                                 <p className="text-[10px] font-black text-white uppercase tracking-widest leading-none mb-1">{s.label}</p>
                                 <p className="text-[9px] text-white/30 uppercase italic">{s.sub}</p>
                             </motion.div>
@@ -135,10 +135,10 @@ const Home2 = () => {
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95 }}
                         whileInView={{ opacity: 1, scale: 1 }}
-                        className="p-16 rounded-[4rem] bg-gradient-to-br from-emerald-500/10 to-transparent border border-emerald-500/20 text-center relative overflow-hidden"
+                        className="p-8 sm:p-12 md:p-16 rounded-2xl md:rounded-[4rem] bg-gradient-to-br from-emerald-500/10 to-transparent border border-emerald-500/20 text-center relative overflow-hidden"
                     >
                         <ShieldCheck className="w-16 h-16 text-emerald-500 mx-auto mb-10" />
-                        <h2 className="text-4xl md:text-6xl font-display font-black text-white leading-[0.9] mb-8 uppercase italic">
+                        <h2 className="text-3xl sm:text-4xl md:text-6xl font-display font-black text-white leading-[0.9] mb-8 uppercase italic">
                             Don't leave your <br />
                             <span className="text-gradient-purple">legacy to chance</span>
                         </h2>

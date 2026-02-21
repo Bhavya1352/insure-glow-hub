@@ -62,7 +62,7 @@ const CoverageSection = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 relative">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-20">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 md:gap-8 mb-12 md:mb-20">
           <div>
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
@@ -71,7 +71,7 @@ const CoverageSection = () => {
             >
               <Zap className="w-3 h-3" /> Level Up Your Safety
             </motion.div>
-            <h2 className="text-3xl md:text-6xl font-display font-black text-white leading-[1.1]">
+            <h2 className="text-2xl sm:text-3xl md:text-6xl font-display font-black text-white leading-[1.1]">
               The Layered <br />
               <span className="text-gradient-purple">Protection Matrix</span>
             </h2>
@@ -81,7 +81,7 @@ const CoverageSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-12 items-start">
           {/* Category Selector Side */}
           <div className="lg:col-span-4 space-y-4">
             {protectionLayers.map((layer) => {
@@ -91,7 +91,7 @@ const CoverageSection = () => {
                 <button
                   key={layer.id}
                   onClick={() => setActiveCategory(layer.id)}
-                  className={`w-full group relative p-8 rounded-[2.5rem] border transition-all text-left overflow-hidden ${isActive
+                  className={`w-full group relative p-5 md:p-8 rounded-2xl md:rounded-[2.5rem] border transition-all text-left overflow-hidden ${isActive
                     ? `bg-${layer.color}-500/10 border-${layer.color}-500/50 shadow-premium`
                     : 'bg-white/[0.02] border-white/5 hover:border-white/10'
                     }`}
@@ -129,7 +129,7 @@ const CoverageSection = () => {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
-                className="bg-[#0a0c10]/40 backdrop-blur-3xl border border-white/10 rounded-[2.5rem] md:rounded-[3rem] p-6 md:p-12 relative overflow-hidden"
+                className="bg-[#0a0c10]/40 backdrop-blur-3xl border border-white/10 rounded-2xl md:rounded-[2.5rem] lg:rounded-[3rem] p-4 sm:p-6 md:p-12 relative overflow-hidden"
               >
                 {/* Base Layer Section */}
                 <div className="mb-12">
@@ -138,13 +138,13 @@ const CoverageSection = () => {
                     <span className="text-[10px] font-black text-emerald-500 uppercase tracking-widest">Foundation Layer (Active)</span>
                   </div>
 
-                  <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 p-8 rounded-3xl bg-white/5 border border-white/10 shadow-glass">
+                  <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 md:gap-6 p-4 sm:p-6 md:p-8 rounded-2xl md:rounded-3xl bg-white/5 border border-white/10 shadow-glass">
                     <div>
-                      <h4 className="text-3xl font-display font-black text-white mb-2">{activeData?.base.title}</h4>
+                      <h4 className="text-xl sm:text-2xl md:text-3xl font-display font-black text-white mb-2">{activeData?.base.title}</h4>
                       <p className="text-muted-foreground max-w-md">{activeData?.base.desc}</p>
                     </div>
                     <div className="text-right">
-                      <p className="text-4xl font-display font-black text-white">{activeData?.base.price}</p>
+                      <p className="text-2xl md:text-4xl font-display font-black text-white">{activeData?.base.price}</p>
                       <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest mt-1">Starting Premium</p>
                     </div>
                   </div>
@@ -164,7 +164,7 @@ const CoverageSection = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: idx * 0.1 }}
                         key={booster.id}
-                        className="group p-6 rounded-[2.5rem] border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] hover:border-white/10 transition-all cursor-pointer relative overflow-hidden"
+                        className="group p-4 md:p-6 rounded-2xl md:rounded-[2.5rem] border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] hover:border-white/10 transition-all cursor-pointer relative overflow-hidden"
                       >
                         <div className={`absolute top-0 right-0 w-16 h-16 bg-${activeData?.color}-500 opacity-0 group-hover:opacity-10 blur-2xl transition-opacity`} />
 
