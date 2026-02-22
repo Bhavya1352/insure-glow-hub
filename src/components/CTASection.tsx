@@ -91,7 +91,7 @@ const CTASection = () => {
             />
           </button>
           <span className={`text-[10px] font-black uppercase tracking-widest ${annual ? 'text-white' : 'text-muted-foreground'}`}>
-            Cycle: Annual <span className="text-purple-500 ml-1">(-20%)</span>
+            Cycle: Annual <span className="text-purple-500 ms-1">(-20%)</span>
           </span>
         </div>
 
@@ -109,12 +109,12 @@ const CTASection = () => {
                 }`}
             >
               {plan.featured && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-5 py-1.5 rounded-full bg-purple-500 text-white text-[10px] font-black uppercase tracking-widest shadow-premium">
+                <div className="absolute -top-4 start-1/2 -translate-x-1/2 px-5 py-1.5 rounded-full bg-purple-500 text-white text-[10px] font-black uppercase tracking-widest shadow-premium">
                   Most Optimized DNA
                 </div>
               )}
 
-              <div className="mb-10 text-left">
+              <div className="mb-10 text-start">
                 <h3 className="text-2xl font-black text-white mb-4 uppercase tracking-[0.1em]">{plan.name}</h3>
                 <div className="flex items-baseline gap-1">
                   <span className="text-4xl font-display font-black text-white">
@@ -124,11 +124,11 @@ const CTASection = () => {
                 </div>
               </div>
 
-              <p className="text-muted-foreground text-xs leading-relaxed mb-10 text-left font-medium">
+              <p className="text-muted-foreground text-xs leading-relaxed mb-10 text-start font-medium">
                 {plan.desc}
               </p>
 
-              <ul className="space-y-4 mb-12 text-left">
+              <ul className="space-y-4 mb-12 text-start">
                 {plan.features.map((f) => (
                   <li key={f} className="flex items-center gap-3 text-xs font-bold text-white/80 uppercase tracking-wide">
                     <ShieldCheck className="w-4 h-4 text-purple-500" />

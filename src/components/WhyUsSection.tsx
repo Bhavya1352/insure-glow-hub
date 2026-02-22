@@ -44,7 +44,7 @@ const WhyUsSection = () => {
     return (
         <section id="how-it-works" className="py-32 relative overflow-hidden bg-background">
             {/* Background Decorative Element */}
-            <div className="absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-y-1/2" />
+            <div className="absolute top-1/2 start-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-y-1/2" />
 
             <div className="max-w-7xl mx-auto px-6 relative">
                 <div className="text-center mb-24">
@@ -66,7 +66,7 @@ const WhyUsSection = () => {
 
                 <div className="relative">
                     {/* Progress Track (Desktop) */}
-                    <div className="hidden lg:block absolute top-[60px] left-[10%] right-[10%] h-[2px] bg-white/5">
+                    <div className="hidden lg:block absolute top-[60px] start-[10%] end-[10%] h-[2px] bg-white/5">
                         <motion.div
                             initial={{ width: "0%" }}
                             whileInView={{ width: "100%" }}

@@ -35,7 +35,7 @@ const TestimonialsSection = () => {
   return (
     <section id="testimonials" className="py-32 relative overflow-hidden bg-background">
       {/* Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-purple-500/5 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 start-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-purple-500/5 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative text-center">
         <motion.div
@@ -59,7 +59,7 @@ const TestimonialsSection = () => {
           "Numbers build trust, but stories prove our advocacy DNA. See how we've stood by our members during critical hours."
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-start">
           {settlementStories.map((item, i) => (
             <motion.div
               key={item.name}
@@ -80,7 +80,7 @@ const TestimonialsSection = () => {
               </div>
 
               <div className="relative mb-10">
-                <Quote className="absolute -top-4 -left-4 w-12 h-12 text-white/5" />
+                <Quote className="absolute -top-4 -start-4 w-12 h-12 text-white/5" />
                 <p className="text-muted-foreground text-sm leading-relaxed relative z-10 italic">
                   "{item.quote}"
                 </p>
@@ -91,7 +91,7 @@ const TestimonialsSection = () => {
                   <h4 className="font-bold text-white text-sm">{item.name}</h4>
                   <p className="text-[10px] font-black text-muted-foreground uppercase tracking-widest mt-1">{item.plan}</p>
                 </div>
-                <div className="text-right">
+                <div className="text-end">
                   <div className="flex items-center gap-1.5 justify-end">
                     <Zap className="w-3 h-3 text-emerald-500" />
                     <span className="text-xs font-black text-white">{item.time}</span>
@@ -101,7 +101,7 @@ const TestimonialsSection = () => {
               </div>
 
               {/* Decorative Corner Glow */}
-              <div className={`absolute bottom-0 right-0 w-32 h-32 bg-${item.color}-500 blur-3xl opacity-0 group-hover:opacity-10 transition-opacity`} />
+              <div className={`absolute bottom-0 end-0 w-32 h-32 bg-${item.color}-500 blur-3xl opacity-0 group-hover:opacity-10 transition-opacity`} />
             </motion.div>
           ))}
         </div>

@@ -22,9 +22,9 @@ const Home1 = () => {
             {/* Hero Section */}
             <section className="relative pt-28 md:pt-48 pb-16 md:pb-32 overflow-hidden bg-[#050608]">
                 {/* Abstract Background Glows */}
-                <div className="absolute top-0 inset-x-0 h-full pointer-events-none">
-                    <div className="absolute top-[-10%] start-[-10%] w-[50%] h-[50%] bg-purple-600/10 blur-[150px] rounded-full" />
-                    <div className="absolute bottom-[20%] end-[-5%] w-[40%] h-[40%] bg-blue-600/10 blur-[150px] rounded-full" />
+                <div className="absolute top-0 start-0 end-0 h-full pointer-events-none">
+                    <div className="absolute top-[-10%] start-1/2 w-[50%] h-[50%] bg-purple-600/10 blur-[150px] rounded-full" />
+                    <div className="absolute bottom-[20%] start-1/2 w-[40%] h-[40%] bg-blue-600/10 blur-[150px] rounded-full" />
                 </div>
 
                 <div className="max-w-7xl mx-auto px-6 relative text-center">
@@ -230,7 +230,7 @@ const Home1 = () => {
                                 />
                             ))}
                         </div>
-                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-6 py-2 rounded-xl bg-purple-600 shadow-premium font-black text-[10px] text-white uppercase tracking-widest">
+                        <div className="absolute top-1/2 start-1/2 -translate-x-1/2 rtl:translate-x-1/2 -translate-y-1/2 px-6 py-2 rounded-xl bg-purple-600 shadow-premium font-black text-[10px] text-white uppercase tracking-widest">
                             +18% Optimization
                         </div>
                     </motion.div>

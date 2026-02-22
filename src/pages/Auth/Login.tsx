@@ -9,8 +9,8 @@ const Login = () => {
     return (
         <div className="min-h-screen bg-[#050608] flex items-center justify-center p-6 relative overflow-hidden">
             {/* Background Glows */}
-            <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-purple-600/10 blur-[150px] rounded-full" />
-            <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-blue-600/10 blur-[150px] rounded-full" />
+            <div className="absolute top-[-10%] start-[-10%] w-[50%] h-[50%] bg-purple-600/10 blur-[150px] rounded-full" />
+            <div className="absolute bottom-[-10%] end-[-10%] w-[50%] h-[50%] bg-blue-600/10 blur-[150px] rounded-full" />
 
             <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
@@ -31,7 +31,7 @@ const Login = () => {
                 <div className="p-8 rounded-[2.5rem] bg-[#0a0c10] border border-white/5 shadow-glass">
                     <form className="space-y-6">
                         <div className="space-y-2">
-                            <label className="text-[10px] font-black text-white/40 uppercase tracking-widest ml-1">Terminal handle (Email)</label>
+                            <label className="text-[10px] font-black text-white/40 uppercase tracking-widest ms-1">Terminal handle (Email)</label>
                             <input
                                 type="email"
                                 placeholder="operator@orbitscale.dev"
@@ -41,7 +41,7 @@ const Login = () => {
 
                         <div className="space-y-2">
                             <div className="flex justify-between">
-                                <label className="text-[10px] font-black text-white/40 uppercase tracking-widest ml-1">Access Code (Password)</label>
+                                <label className="text-[10px] font-black text-white/40 uppercase tracking-widest ms-1">Access Code (Password)</label>
                                 <button type="button" className="text-[9px] font-black text-purple-500 uppercase tracking-widest hover:text-purple-400 transition-colors">Forgot?</button>
                             </div>
                             <div className="relative">
@@ -53,7 +53,7 @@ const Login = () => {
                                 <button
                                     type="button"
                                     onClick={() => setShowPassword(!showPassword)}
-                                    className="absolute right-4 top-1/2 -translate-y-1/2 text-white/20 hover:text-white transition-colors"
+                                    className="absolute end-4 top-1/2 -translate-y-1/2 text-white/20 hover:text-white transition-colors"
                                 >
                                     {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
                                 </button>

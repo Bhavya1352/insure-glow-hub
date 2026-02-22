@@ -27,8 +27,8 @@ const Home2 = () => {
             {/* Insurance Hero - Protection DNA */}
             <section className="relative pt-28 md:pt-48 pb-16 md:pb-32 overflow-hidden">
                 {/* Background Aesthetics */}
-                <div className="absolute top-0 right-0 w-[60%] h-[60%] bg-emerald-500/5 blur-[200px] rounded-full pointer-events-none" />
-                <div className="absolute bottom-[-10%] left-[-10%] w-[50%] h-[50%] bg-blue-600/5 blur-[150px] rounded-full pointer-events-none" />
+                <div className="absolute top-0 end-0 w-[60%] h-[60%] bg-emerald-500/5 blur-[200px] rounded-full pointer-events-none" />
+                <div className="absolute bottom-[-10%] start-[-10%] w-[50%] h-[50%] bg-blue-600/5 blur-[150px] rounded-full pointer-events-none" />
 
                 <div className="max-w-7xl mx-auto px-6 relative">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
@@ -65,7 +65,7 @@ const Home2 = () => {
                         >
                             <div className="flex items-center justify-between mb-12">
                                 <ShieldCheck className="w-12 h-12 text-emerald-500" />
-                                <div className="text-right">
+                                <div className="text-end">
                                     <p className="text-[10px] font-black text-white/40 uppercase tracking-widest">Global Status</p>
                                     <p className="text-xl font-display font-black text-white italic tracking-tight">System Integrity 100%</p>
                                 </div>
@@ -90,7 +90,7 @@ const Home2 = () => {
                                 ))}
                             </div>
 
-                            <div className="absolute top-[-20%] right-[-20%] w-64 h-64 bg-emerald-500/5 blur-[60px] rounded-full group-hover:scale-110 transition-transform duration-1000" />
+                            <div className="absolute top-[-20%] end-[-20%] w-64 h-64 bg-emerald-500/5 blur-[60px] rounded-full group-hover:scale-110 transition-transform duration-1000" />
                         </motion.div>
                     </div>
                 </div>
@@ -105,7 +105,7 @@ const Home2 = () => {
             {/* Real-time Stats */}
             <section className="py-24 bg-[#050608] border-y border-white/5 overflow-hidden">
                 <div className="max-w-7xl mx-auto px-6">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 text-center md:text-left">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 text-center md:text-start">
                         {[
                             { label: "Settlement Velocity", val: "14h", sub: "Global Record" },
                             { label: "Claims Integrity", val: "99.4%", sub: "Verified Success" },
@@ -154,7 +154,7 @@ const Home2 = () => {
                             </Link>
                         </div>
                         {/* Absolute Decorative */}
-                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-emerald-500/5 blur-[120px] rounded-full" />
+                        <div className="absolute top-1/2 start-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-emerald-500/5 blur-[120px] rounded-full" />
                     </motion.div>
                 </div>
             </section>

@@ -17,7 +17,7 @@ const TrustBar = () => {
 
         {/* Regulatory Vault Container */}
         <div className="bg-[#0a0c10]/40 backdrop-blur-2xl border border-white/5 rounded-[3rem] p-8 md:p-12 shadow-premium relative overflow-hidden group">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-purple-500/5 blur-3xl rounded-full -mr-32 -mt-32" />
+          <div className="absolute top-0 end-0 w-64 h-64 bg-purple-500/5 blur-3xl rounded-full -me-32 -mt-32" />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 relative z-10">
             {trustMarkers.map((marker, i) => (
@@ -57,7 +57,7 @@ const TrustBar = () => {
         <motion.div
           animate={{ y: [0, -10, 0] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute -top-6 left-1/2 -translate-x-1/2 px-6 py-2 rounded-xl bg-background border border-white/10 shadow-premium flex items-center gap-3 z-20"
+          className="absolute -top-6 start-1/2 -translate-x-1/2 rtl:translate-x-1/2 px-6 py-2 rounded-xl bg-background border border-white/10 shadow-premium flex items-center gap-3 z-20"
         >
           <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
           <span className="text-[10px] font-black text-white uppercase tracking-widest leading-none">IRDAI Certified DNA • 2024 Compliance</span>

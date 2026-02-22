@@ -57,7 +57,7 @@ const Solutions = () => {
     return (
         <div className="pt-24 md:pt-32 pb-16 md:pb-24 bg-background overflow-hidden relative">
             {/* Background Glows */}
-            <div className="absolute top-0 inset-x-0 h-full pointer-events-none opacity-20">
+            <div className="absolute top-0 start-0 end-0 h-full pointer-events-none opacity-20">
                 <div className="absolute top-[10%] start-[-10%] w-[50%] h-[50%] bg-purple-600/10 blur-[150px] rounded-full" />
                 <div className="absolute bottom-[10%] end-[-10%] w-[50%] h-[50%] bg-blue-600/10 blur-[150px] rounded-full" />
             </div>
@@ -129,7 +129,7 @@ const Solutions = () => {
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 relative">
                         {/* Connector Line */}
-                        <div className="absolute top-1/2 inset-x-0 h-px bg-white/5 -translate-y-1/2 hidden md:block" />
+                        <div className="absolute top-1/2 start-0 end-0 h-px bg-white/5 -translate-y-1/2 hidden md:block" />
 
                         {workflowSteps.map((step, i) => (
                             <motion.div
@@ -156,7 +156,7 @@ const Solutions = () => {
 
                     <div className="max-w-4xl mx-auto relative ps-6 pe-6">
                         {/* Center Line */}
-                        <div className="absolute top-0 bottom-0 start-1/2 w-0.5 bg-gradient-to-b from-purple-500 via-pink-500 to-emerald-500 -translate-x-1/2 [dir=rtl]:translate-x-1/2 hidden md:block" />
+                        <div className="absolute top-0 bottom-0 start-1/2 w-0.5 bg-gradient-to-b from-purple-500 via-pink-500 to-emerald-500 -translate-x-1/2 rtl:translate-x-1/2 hidden md:block" />
 
                         <div className="space-y-10 md:space-y-20">
                             {engagementTimeline.map((item, i) => (
@@ -174,7 +174,7 @@ const Solutions = () => {
                                     </div>
 
                                     {/* Node Circle */}
-                                    <div className="absolute start-1/2 -translate-x-1/2 [dir=rtl]:translate-x-1/2 w-10 h-10 rounded-full bg-purple-600 border-4 border-black flex items-center justify-center text-white text-xs font-black shadow-premium z-20 hidden md:flex">
+                                    <div className="absolute start-1/2 -translate-x-1/2 rtl:translate-x-1/2 w-10 h-10 rounded-full bg-purple-600 border-4 border-black flex items-center justify-center text-white text-xs font-black shadow-premium z-20 hidden md:flex">
                                         {item.id}
                                     </div>
                                 </motion.div>

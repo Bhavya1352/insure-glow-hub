@@ -62,7 +62,7 @@ const AdminDashboard = () => {
     return (
         <div className="min-h-screen bg-[#050608] flex pt-24 lg:pt-28">
             {/* Left Sidebar */}
-            <aside className="hidden lg:flex w-64 flex-col fixed left-0 top-24 bottom-0 bg-[#050608] border-r border-white/5 px-6 py-8 z-20">
+            <aside className="hidden lg:flex w-64 flex-col fixed start-0 top-24 bottom-0 bg-[#050608] border-e border-white/5 px-6 py-8 z-20">
                 <p className="text-[9px] font-black text-white/20 uppercase tracking-[0.3em] mb-6">Navigation</p>
                 <nav className="space-y-1 mb-10">
                     {sidebarLinks.map(link => (
@@ -99,23 +99,23 @@ const AdminDashboard = () => {
             </aside>
 
             {/* Main Content */}
-            <div className="flex-1 lg:ml-64 min-h-screen">
+            <div className="flex-1 lg:ms-64 min-h-screen">
                 {/* Top Bar */}
                 <header className="sticky top-24 z-30 bg-[#050608]/80 backdrop-blur-xl border-b border-white/5 px-6 lg:px-10 py-4 flex items-center justify-between">
                     <div className="flex items-center gap-4">
                         <div className="relative hidden sm:block">
-                            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/20" />
+                            <Search className="absolute start-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/20" />
                             <input
                                 type="text"
                                 placeholder="Search policies or claims..."
-                                className="pl-10 pr-4 py-2.5 rounded-xl bg-white/5 border border-white/5 text-xs text-white outline-none focus:border-purple-500/50 w-64 transition-all"
+                                className="ps-10 pe-4 py-2.5 rounded-xl bg-white/5 border border-white/5 text-xs text-white outline-none focus:border-purple-500/50 w-64 transition-all"
                             />
                         </div>
                     </div>
                     <div className="flex items-center gap-4">
                         <button className="p-2.5 rounded-xl bg-white/5 border border-white/5 text-white/40 hover:text-white transition-all relative">
                             <Bell className="w-4 h-4" />
-                            <div className="absolute top-2 right-2 w-2 h-2 rounded-full bg-rose-500" />
+                            <div className="absolute top-2 end-2 w-2 h-2 rounded-full bg-rose-500" />
                         </button>
                         <button className="text-[10px] font-black text-white/40 uppercase tracking-widest hover:text-white transition-colors">Logout</button>
                         <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-rose-500 to-purple-500 flex items-center justify-center text-[10px] font-black text-white">AD</div>
@@ -151,7 +151,7 @@ const AdminDashboard = () => {
                                 </button>
                             </div>
                         </div>
-                        <div className="absolute top-[-20%] right-[-10%] w-96 h-96 bg-rose-500/10 blur-[120px] rounded-full" />
+                        <div className="absolute top-[-20%] end-[-10%] w-96 h-96 bg-rose-500/10 blur-[120px] rounded-full" />
                     </motion.section>
 
                     {/* Stats Cards */}
@@ -175,7 +175,7 @@ const AdminDashboard = () => {
                                 </div>
                                 <p className="text-2xl font-black text-white italic tracking-tight mb-1">{s.value}</p>
                                 <p className="text-[10px] font-black text-white/20 uppercase tracking-widest">{s.label}</p>
-                                <div className={`absolute bottom-[-10%] right-[-10%] w-20 h-20 bg-${s.color}-500/5 blur-[30px] rounded-full`} />
+                                <div className={`absolute bottom-[-10%] end-[-10%] w-20 h-20 bg-${s.color}-500/5 blur-[30px] rounded-full`} />
                             </motion.div>
                         ))}
                     </section>
@@ -202,13 +202,13 @@ const AdminDashboard = () => {
                             </div>
                             <div className="h-56 w-full relative">
                                 {/* Y-axis labels */}
-                                <div className="absolute left-0 top-0 bottom-0 flex flex-col justify-between text-[8px] text-white/15 font-bold pr-2">
+                                <div className="absolute start-0 top-0 bottom-0 flex flex-col justify-between text-[8px] text-white/15 font-bold pe-2">
                                     <span>$1500k</span>
                                     <span>$1000k</span>
                                     <span>$500k</span>
                                     <span>$0k</span>
                                 </div>
-                                <svg className="w-full h-full pl-12" viewBox="0 0 400 120" preserveAspectRatio="none">
+                                <svg className="w-full h-full ps-12" viewBox="0 0 400 120" preserveAspectRatio="none">
                                     <defs>
                                         <linearGradient id="adminAreaGrad" x1="0" x2="0" y1="0" y2="1">
                                             <stop offset="0%" stopColor="#10b981" stopOpacity="0.3" />
@@ -260,8 +260,8 @@ const AdminDashboard = () => {
                             </div>
                             <div className="flex items-center gap-3">
                                 <div className="relative">
-                                    <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-3 h-3 text-white/20" />
-                                    <input type="text" placeholder="Search..." className="pl-8 pr-4 py-2 rounded-lg bg-white/5 border border-white/5 text-[10px] text-white outline-none w-40" />
+                                    <Search className="absolute start-3 top-1/2 -translate-y-1/2 w-3 h-3 text-white/20" />
+                                    <input type="text" placeholder="Search..." className="ps-8 pe-4 py-2 rounded-lg bg-white/5 border border-white/5 text-[10px] text-white outline-none w-40" />
                                 </div>
                                 <button className="px-4 py-2 rounded-lg bg-rose-600 text-white text-[9px] font-black uppercase tracking-widest flex items-center gap-2 hover:scale-105 active:scale-95 transition-all">
                                     <Download className="w-3 h-3" /> Export
@@ -271,21 +271,21 @@ const AdminDashboard = () => {
 
                         {/* Table */}
                         <div className="overflow-x-auto">
-                            <table className="w-full text-left">
+                            <table className="w-full text-start">
                                 <thead>
                                     <tr className="border-b border-white/5">
-                                        <th className="text-[9px] font-black text-white/20 uppercase tracking-widest pb-4 pr-4">User</th>
-                                        <th className="text-[9px] font-black text-white/20 uppercase tracking-widest pb-4 pr-4 hidden sm:table-cell">Email</th>
-                                        <th className="text-[9px] font-black text-white/20 uppercase tracking-widest pb-4 pr-4">Plan</th>
-                                        <th className="text-[9px] font-black text-white/20 uppercase tracking-widest pb-4 pr-4 hidden md:table-cell">Signup</th>
-                                        <th className="text-[9px] font-black text-white/20 uppercase tracking-widest pb-4 pr-4">Status</th>
+                                        <th className="text-[9px] font-black text-white/20 uppercase tracking-widest pb-4 pe-4">User</th>
+                                        <th className="text-[9px] font-black text-white/20 uppercase tracking-widest pb-4 pe-4 hidden sm:table-cell">Email</th>
+                                        <th className="text-[9px] font-black text-white/20 uppercase tracking-widest pb-4 pe-4">Plan</th>
+                                        <th className="text-[9px] font-black text-white/20 uppercase tracking-widest pb-4 pe-4 hidden md:table-cell">Signup</th>
+                                        <th className="text-[9px] font-black text-white/20 uppercase tracking-widest pb-4 pe-4">Status</th>
                                         <th className="text-[9px] font-black text-white/20 uppercase tracking-widest pb-4">Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     {recentSignups.map((user, i) => (
                                         <tr key={i} className="border-b border-white/5 last:border-0 hover:bg-white/[0.02] transition-all">
-                                            <td className="py-4 pr-4">
+                                            <td className="py-4 pe-4">
                                                 <div className="flex items-center gap-3">
                                                     <div className={`w-8 h-8 rounded-full ${i === 0 ? 'bg-emerald-500' : i === 1 ? 'bg-rose-500' : i === 2 ? 'bg-purple-500' : 'bg-orange-500'} flex items-center justify-center text-[9px] font-black text-white`}>
                                                         {user.name.split(' ').map(n => n[0]).join('')}
@@ -293,11 +293,11 @@ const AdminDashboard = () => {
                                                     <span className="text-xs font-bold text-white">{user.name}</span>
                                                 </div>
                                             </td>
-                                            <td className="py-4 pr-4 text-[10px] text-white/30 hidden sm:table-cell">{user.email}</td>
+                                            <td className="py-4 pe-4 text-[10px] text-white/30 hidden sm:table-cell">{user.email}</td>
                                             <td className="py-4 pr-4">
                                                 <span className={`text-[8px] font-black text-white uppercase px-2 py-1 rounded-md ${user.planColor}`}>{user.plan}</span>
                                             </td>
-                                            <td className="py-4 pr-4 text-[10px] text-white/30 hidden md:table-cell">{user.date}</td>
+                                            <td className="py-4 pe-4 text-[10px] text-white/30 hidden md:table-cell">{user.date}</td>
                                             <td className="py-4 pr-4">
                                                 <span className={`text-[10px] font-bold ${user.statusColor}`}>● {user.status}</span>
                                             </td>

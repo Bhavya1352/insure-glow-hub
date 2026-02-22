@@ -7,8 +7,8 @@ const Signup = () => {
     return (
         <div className="min-h-screen bg-[#050608] flex items-center justify-center p-6 lg:p-12 relative overflow-hidden">
             {/* Background Aesthetics */}
-            <div className="absolute top-0 right-0 w-[60%] h-[60%] bg-purple-600/10 blur-[200px] rounded-full pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-[60%] h-[60%] bg-blue-600/10 blur-[200px] rounded-full pointer-events-none" />
+            <div className="absolute top-0 end-0 w-[60%] h-[60%] bg-purple-600/10 blur-[200px] rounded-full pointer-events-none" />
+            <div className="absolute bottom-0 start-0 w-[60%] h-[60%] bg-blue-600/10 blur-[200px] rounded-full pointer-events-none" />
 
             <div className="w-full max-w-[1200px] grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center relative z-10">
                 <motion.div
@@ -59,7 +59,7 @@ const Signup = () => {
 
                         <form className="space-y-5">
                             <div className="space-y-2">
-                                <label className="text-[9px] font-black text-white/40 uppercase tracking-widest ml-1">Full Name</label>
+                                <label className="text-[9px] font-black text-white/40 uppercase tracking-widest ms-1">Access Code</label>
                                 <input
                                     type="text"
                                     placeholder="John Operator"
@@ -68,7 +68,7 @@ const Signup = () => {
                             </div>
 
                             <div className="space-y-2">
-                                <label className="text-[9px] font-black text-white/40 uppercase tracking-widest ml-1">Work Email</label>
+                                <label className="text-[9px] font-black text-white/40 uppercase tracking-widest ms-1">Work Email</label>
                                 <input
                                     type="email"
                                     placeholder="john@company.dev"
@@ -77,7 +77,7 @@ const Signup = () => {
                             </div>
 
                             <div className="space-y-2">
-                                <label className="text-[9px] font-black text-white/40 uppercase tracking-widest ml-1">Access Code</label>
+                                <label className="text-[9px] font-black text-white/40 uppercase tracking-widest ms-1">Access Code</label>
                                 <input
                                     type="password"
                                     placeholder="••••••••"

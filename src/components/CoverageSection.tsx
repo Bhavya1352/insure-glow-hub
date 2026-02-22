@@ -57,7 +57,7 @@ const CoverageSection = () => {
   return (
     <section id="coverage" className="py-32 relative overflow-hidden bg-background">
       {/* Background Text Overlay */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[15vw] font-black text-white/[0.02] pointer-events-none select-none">
+      <div className="absolute top-1/2 start-1/2 -translate-x-1/2 -translate-y-1/2 text-[15vw] font-black text-white/[0.02] pointer-events-none select-none">
         PROTECTION
       </div>
 

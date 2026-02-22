@@ -56,7 +56,7 @@ const UserDashboard = () => {
     return (
         <div className="min-h-screen bg-[#050608] flex pt-24 lg:pt-28">
             {/* Left Sidebar */}
-            <aside className="hidden lg:flex w-64 flex-col fixed left-0 top-24 bottom-0 bg-[#050608] border-r border-white/5 px-6 py-8 z-20">
+            <aside className="hidden lg:flex w-64 flex-col fixed start-0 top-24 bottom-0 bg-[#050608] border-e border-white/5 px-6 py-8 z-20">
                 <p className="text-[9px] font-black text-white/20 uppercase tracking-[0.3em] mb-6">Navigation</p>
                 <nav className="space-y-1 mb-10">
                     {sidebarLinks.map(link => (
@@ -94,16 +94,16 @@ const UserDashboard = () => {
             </aside>
 
             {/* Main Content */}
-            <div className="flex-1 lg:ml-64 min-h-screen">
+            <div className="flex-1 lg:ms-64 min-h-screen">
                 {/* Top Bar */}
                 <header className="sticky top-24 z-30 bg-[#050608]/80 backdrop-blur-xl border-b border-white/5 px-6 lg:px-10 py-4 flex items-center justify-between">
                     <div className="flex items-center gap-4">
                         <div className="relative hidden sm:block">
-                            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/20" />
+                            <Search className="absolute start-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/20" />
                             <input
                                 type="text"
                                 placeholder="Search..."
-                                className="pl-10 pr-4 py-2.5 rounded-xl bg-white/5 border border-white/5 text-xs text-white outline-none focus:border-purple-500/50 w-56 transition-all"
+                                className="ps-10 pe-4 py-2.5 rounded-xl bg-white/5 border border-white/5 text-xs text-white outline-none focus:border-purple-500/50 w-56 transition-all"
                             />
                         </div>
                     </div>
@@ -145,7 +145,7 @@ const UserDashboard = () => {
                                 </button>
                             </div>
                         </div>
-                        <div className="absolute top-[-20%] right-[-10%] w-96 h-96 bg-purple-500/10 blur-[120px] rounded-full" />
+                        <div className="absolute top-[-20%] end-[-10%] w-96 h-96 bg-purple-500/10 blur-[120px] rounded-full" />
                     </motion.section>
 
                     {/* Stats Cards */}

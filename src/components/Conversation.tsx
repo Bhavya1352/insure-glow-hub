@@ -11,6 +11,7 @@ import {
     Sparkles,
     Headphones
 } from "lucide-react";
+import { useDirection } from "@/contexts/DirectionContext";
 
 interface Message {
     id: number;
@@ -21,7 +22,8 @@ interface Message {
 
 const Conversation = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const [isRTL, setIsRTL] = useState(false);
+    const { direction: globalDirection, toggleDirection } = useDirection();
+    const isRTL = globalDirection === "rtl";
     const [inputText, setInputText] = useState("");
     const [messages, setMessages] = useState<Message[]>([
         {
@@ -77,7 +79,7 @@ const Conversation = () => {
     };
 
     return (
-        <div className="fixed bottom-6 right-6 z-[9999]">
+        <div className="fixed bottom-6 end-6 z-[9999]">
             <AnimatePresence>
                 {!isOpen && (
                     <motion.button
@@ -90,8 +92,8 @@ const Conversation = () => {
                         className="w-16 h-16 rounded-2xl bg-orbit-purple flex items-center justify-center text-white shadow-premium glow-purple relative group"
                     >
                         <MessageSquare className="w-8 h-8" />
-                        <div className="absolute -top-1 -right-1 w-4 h-4 bg-emerald-500 rounded-full border-2 border-background animate-pulse" />
-                        <span className="absolute right-full mr-4 px-3 py-1.5 rounded-lg bg-[#0a0c10] border border-white/10 text-[10px] font-black uppercase tracking-widest text-white opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+                        <div className="absolute -top-1 -end-1 w-4 h-4 bg-emerald-500 rounded-full border-2 border-background animate-pulse" />
+                        <span className="absolute end-full me-4 px-3 py-1.5 rounded-lg bg-[#0a0c10] border border-white/10 text-[10px] font-black uppercase tracking-widest text-white opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
                             Advocacy Desk
                         </span>
                     </motion.button>
@@ -105,7 +107,7 @@ const Conversation = () => {
                         animate={{ y: 0, opacity: 1, scale: 1 }}
                         exit={{ y: 20, opacity: 0, scale: 0.95 }}
                         className={`w-[90vw] sm:w-[400px] h-[600px] max-h-[80vh] bg-[#0a0c10]/80 backdrop-blur-3xl border border-white/10 rounded-[2.5rem] shadow-premium flex flex-col overflow-hidden`}
-                        dir={isRTL ? "rtl" : "ltr"}
+                        dir={globalDirection}
                     >
                         {/* Header */}
                         <div className="p-6 border-b border-white/5 bg-white/[0.02] flex items-center justify-between">
@@ -123,7 +125,7 @@ const Conversation = () => {
                             </div>
                             <div className="flex items-center gap-2">
                                 <button
-                                    onClick={() => setIsRTL(!isRTL)}
+                                    onClick={toggleDirection}
                                     className={`p-2 rounded-lg transition-colors ${isRTL ? 'bg-purple-500/20 text-purple-500' : 'text-white/40 hover:text-white hover:bg-white/5'}`}
                                     title="Toggle RTL Layout"
                                 >
@@ -155,8 +157,8 @@ const Conversation = () => {
                                 >
                                     <div
                                         className={`max-w-[80%] p-4 rounded-2xl text-[13px] leading-relaxed ${msg.sender === 'user'
-                                                ? 'bg-orbit-purple text-white rounded-br-none shadow-premium'
-                                                : 'bg-white/5 border border-white/10 text-white/80 rounded-bl-none italic'
+                                            ? 'bg-orbit-purple text-white rounded-br-none shadow-premium'
+                                            : 'bg-white/5 border border-white/10 text-white/80 rounded-bl-none italic'
                                             }`}
                                     >
                                         {msg.text}
@@ -177,13 +179,13 @@ const Conversation = () => {
                                     value={inputText}
                                     onChange={(e) => setInputText(e.target.value)}
                                     placeholder={isRTL ? "...اكتب رسالتك" : "Command matrix..."}
-                                    className="w-full bg-[#111317] border border-white/10 rounded-2xl py-4 px-6 pr-14 text-sm text-white focus:outline-none focus:border-orbit-purple focus:ring-1 focus:ring-orbit-purple/50 transition-all placeholder:text-white/20"
+                                    className="w-full bg-[#111317] border border-white/10 rounded-2xl py-4 px-6 pe-14 text-sm text-white focus:outline-none focus:border-orbit-purple focus:ring-1 focus:ring-orbit-purple/50 transition-all placeholder:text-white/20"
                                 />
                                 <button
                                     type="submit"
-                                    className={`absolute ${isRTL ? 'left-2' : 'right-2'} top-1/2 -translate-y-1/2 w-10 h-10 rounded-xl bg-orbit-purple text-white flex items-center justify-center hover:scale-105 active:scale-95 transition-all shadow-premium`}
+                                    className={`absolute ${isRTL ? 'start-2' : 'end-2'} top-1/2 -translate-y-1/2 w-10 h-10 rounded-xl bg-orbit-purple text-white flex items-center justify-center hover:scale-105 active:scale-95 transition-all shadow-premium`}
                                 >
-                                    <Send className={`w-4 h-4 ${isRTL ? 'rotate-180' : ''}`} />
+                                    <Send className={`w-4 h-4 ${isRTL ? 'rtl:rotate-180' : ''}`} />
                                 </button>
                             </form>
                             <div className="mt-3 flex items-center justify-center gap-2">

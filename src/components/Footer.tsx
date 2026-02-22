@@ -98,7 +98,7 @@ const Footer = () => {
       </div>
 
       {/* Background Aesthetic */}
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-600/5 blur-[150px] rounded-full" />
+      <div className="absolute bottom-0 end-0 w-96 h-96 bg-purple-600/5 blur-[150px] rounded-full" />
     </footer>
   );
 };

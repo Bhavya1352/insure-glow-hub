@@ -77,8 +77,8 @@ const About = () => {
                         className="p-6 md:p-10 rounded-2xl md:rounded-[3.5rem] bg-[#0a0c10] border border-white/5 relative overflow-hidden aspect-square flex items-center justify-center"
                     >
                         <div className="absolute inset-0 opacity-20">
-                            <div className="absolute top-1/2 start-1/2 -translate-x-1/2 [dir=rtl]:translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] border-[1px] border-white/10 rounded-full animate-spin-slow" />
-                            <div className="absolute top-1/2 start-1/2 -translate-x-1/2 [dir=rtl]:translate-x-1/2 -translate-y-1/2 w-[100%] h-[100%] border-[1px] border-white/10 rounded-full animate-spin-slow reverse" />
+                            <div className="absolute top-1/2 start-1/2 -translate-x-1/2 rtl:translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] border-[1px] border-white/10 rounded-full animate-spin-slow" />
+                            <div className="absolute top-1/2 start-1/2 -translate-x-1/2 rtl:translate-x-1/2 -translate-y-1/2 w-[100%] h-[100%] border-[1px] border-white/10 rounded-full animate-spin-slow reverse" />
                         </div>
                         <div className="relative text-center">
                             <Shield className="w-24 h-24 text-purple-500 mx-auto mb-8 animate-pulse" />
@@ -135,7 +135,7 @@ const About = () => {
                             <p className="text-[10px] font-black text-white/40 uppercase tracking-widest">Legacies Protected</p>
                         </div>
                     </div>
-                    <div className="absolute top-1/2 start-1/2 -translate-x-1/2 [dir=rtl]:translate-x-1/2 -translate-y-1/2 w-full h-full bg-purple-500/5 blur-[120px] rounded-full" />
+                    <div className="absolute top-1/2 start-1/2 -translate-x-1/2 rtl:translate-x-1/2 -translate-y-1/2 w-full h-full bg-purple-500/5 blur-[120px] rounded-full" />
                 </div>
             </div>
         </div>

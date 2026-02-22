@@ -63,7 +63,7 @@ const Pricing = () => {
     return (
         <div className="pt-24 md:pt-32 pb-16 md:pb-24 bg-background relative overflow-hidden">
             {/* Background Glows */}
-            <div className="absolute top-0 inset-x-0 h-full pointer-events-none opacity-20">
+            <div className="absolute top-0 start-0 end-0 h-full pointer-events-none opacity-20">
                 <div className="absolute top-[-10%] start-[-10%] w-[50%] h-[50%] bg-purple-600/10 blur-[150px] rounded-full" />
                 <div className="absolute bottom-[20%] end-[-5%] w-[40%] h-[40%] bg-blue-600/10 blur-[150px] rounded-full" />
             </div>

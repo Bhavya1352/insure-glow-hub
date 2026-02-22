@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, ShieldCheck, Heart, Car, Umbrella, Zap, Lock, Activity, Users } from "lucide-react";
+import { useDirection } from "@/contexts/DirectionContext";
 
 const HeroSection = () => {
+  const { direction } = useDirection();
+  const isRTL = direction === "rtl";
   const [activeWord, setActiveWord] = useState(0);
   const words = ["DNA", "Family", "Health", "Wealth"];
 
@@ -44,9 +47,9 @@ const HeroSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-16 items-center">
 
           {/* Left Column: Protection DNA Input */}
-          <div className="lg:col-span-5 text-left order-2 lg:order-1">
+          <div className="lg:col-span-5 text-start order-2 lg:order-1">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 0, x: isRTL ? 20 : -20 }}
               animate={{ opacity: 1, x: 0 }}
               className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-xs font-bold uppercase tracking-widest text-muted-foreground mb-8 shadow-glass transition-all"
             >
@@ -182,9 +185,9 @@ const HeroSection = () => {
                 {/* Floating Benefit Nodes */}
                 <div className="absolute inset-0 pointer-events-none">
                   {[
-                    { icon: ShieldCheck, label: "IRDAI SECURED", pos: "top-10 left-1/2 -translate-x-1/2" },
-                    { icon: Zap, label: "INSTANT ISSUANCE", pos: "bottom-10 left-10" },
-                    { icon: Lock, label: "ENCRYPTED VAULT", pos: "bottom-10 right-10" }
+                    { icon: ShieldCheck, label: "IRDAI SECURED", pos: "top-10 start-1/2 -translate-x-1/2 rtl:translate-x-1/2" },
+                    { icon: Zap, label: "INSTANT ISSUANCE", pos: "bottom-10 start-10" },
+                    { icon: Lock, label: "ENCRYPTED VAULT", pos: "bottom-10 end-10" }
                   ].map((node, i) => (
                     <motion.div
                       key={node.label}
@@ -204,7 +207,7 @@ const HeroSection = () => {
 
               {/* Live Quote Indicator */}
               <motion.div
-                className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-[90%] max-w-[300px] py-3 px-4 md:py-4 md:px-6 rounded-xl md:rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 flex justify-between items-center shadow-premium"
+                className="absolute -bottom-8 start-1/2 -translate-x-1/2 rtl:translate-x-1/2 w-[90%] max-w-[300px] py-3 px-4 md:py-4 md:px-6 rounded-xl md:rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 flex justify-between items-center shadow-premium"
               >
                 <div>
                   <p className="text-[8px] font-black text-muted-foreground uppercase tracking-widest">Est. Premium</p>
