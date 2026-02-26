@@ -18,13 +18,16 @@ import {
     MessageSquare,
     Eye,
     Copy,
-    Search
+    Search,
+    Globe
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { useDirection } from "@/contexts/DirectionContext";
 
 const UserDashboard = () => {
     const [activeNav, setActiveNav] = useState("Dashboard");
+    const { direction, toggleDirection } = useDirection();
 
     const sidebarLinks = [
         { label: "Dashboard", icon: LayoutDashboard },
@@ -108,6 +111,13 @@ const UserDashboard = () => {
                         </div>
                     </div>
                     <div className="flex items-center gap-4">
+                        <button
+                            onClick={toggleDirection}
+                            className="p-2.5 rounded-xl bg-white/5 border border-white/5 text-white/40 hover:text-white transition-all"
+                            title={direction === "ltr" ? "Switch to RTL" : "Switch to LTR"}
+                        >
+                            <Globe className="w-4 h-4" />
+                        </button>
                         <button className="p-2.5 rounded-xl bg-white/5 border border-white/5 text-white/40 hover:text-white transition-all relative">
                             <Bell className="w-4 h-4" />
                         </button>

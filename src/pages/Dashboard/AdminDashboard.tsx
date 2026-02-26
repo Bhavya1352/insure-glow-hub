@@ -17,12 +17,15 @@ import {
     Eye,
     Plus,
     FileText,
-    Terminal
+    Terminal,
+    Globe
 } from "lucide-react";
 import { useState } from "react";
+import { useDirection } from "@/contexts/DirectionContext";
 
 const AdminDashboard = () => {
     const [activeNav, setActiveNav] = useState("Overview");
+    const { direction, toggleDirection } = useDirection();
 
     const sidebarLinks = [
         { label: "Overview", icon: BarChart3 },
@@ -113,6 +116,13 @@ const AdminDashboard = () => {
                         </div>
                     </div>
                     <div className="flex items-center gap-4">
+                        <button
+                            onClick={toggleDirection}
+                            className="p-2.5 rounded-xl bg-white/5 border border-white/5 text-white/40 hover:text-white transition-all"
+                            title={direction === "ltr" ? "Switch to RTL" : "Switch to LTR"}
+                        >
+                            <Globe className="w-4 h-4" />
+                        </button>
                         <button className="p-2.5 rounded-xl bg-white/5 border border-white/5 text-white/40 hover:text-white transition-all relative">
                             <Bell className="w-4 h-4" />
                             <div className="absolute top-2 end-2 w-2 h-2 rounded-full bg-rose-500" />
