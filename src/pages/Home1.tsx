@@ -36,7 +36,7 @@ const Home1 = () => {
     return (
         <div className="relative">
             {/* Hero Section */}
-            <section className="relative pt-28 md:pt-48 pb-16 md:pb-32 overflow-hidden bg-[#050608]">
+            <section className="relative pt-20 md:pt-32 pb-16 md:pb-32 overflow-hidden bg-[#050608]">
                 {/* Animated Background Blobs */}
                 <div className="absolute top-0 start-0 end-0 h-full pointer-events-none overflow-hidden">
                     <motion.div
@@ -60,7 +60,7 @@ const Home1 = () => {
                     <motion.div
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[10px] font-black uppercase tracking-widest text-purple-400 mb-8"
+                        className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[10px] font-black uppercase tracking-widest text-purple-400 mb-4"
                     >
                         <span className="w-2 h-2 rounded-full bg-purple-500 animate-pulse" /> v2.0 is now live
                     </motion.div>
