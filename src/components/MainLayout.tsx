@@ -13,8 +13,7 @@ const LANDING_PAGES = ["/", "/home-2"];
 
 const MainLayout = ({ children }: MainLayoutProps) => {
     const location = useLocation();
-    const isDashboard = location.pathname.startsWith("/dashboard") || location.pathname.startsWith("/admin");
-    const showNavbar = !isDashboard;
+    const showNavbar = true;
     const { isAnimating } = useDirection();
 
     return (

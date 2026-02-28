@@ -13,7 +13,7 @@ const DirectionContext = createContext<DirectionContextType | undefined>(undefin
 export const DirectionProvider = ({ children }: { children: ReactNode }) => {
     const [direction, setDirection] = useState<Direction>(() => {
         const saved = localStorage.getItem("site-direction");
-        return (saved === "rtl" ? "rtl" : "ltr") as Direction;
+        return (saved === "ltr" ? "ltr" : "rtl") as Direction;
     });
     const [isAnimating, setIsAnimating] = useState(false);
 
